@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>资产统计</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-calendar.css" />
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personalCentetr-assetStatistic.css">
+	
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie"></a>
+					<a href="#" class="personal-index-head-alink-user"></a>
+					<a href="#" class="personal-index-head-alink-bank"></a>
+				</div>
+			</div>
+			
+			<div class="personal-index-head-title">
+				<p>尽情享受你的美好投资时间的</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+
+				<span class="personal-index-head-money_total2">5656565.00 </span>	
+			</div>
+
+		</div>
+	</div>	
+	<!-- home-page信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" ><li >账户首页</li></a>
+				<a href="#"><li>我的投资</li></a>
+				<a href="#"><li>待收明细</li></a>
+				<a href="#"><li>资金记录</li></a>
+				<a href="#"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#"><li>红包奖券</li></a>
+				<a href="#"><li>VIP会员</li></a>
+				<a href="#"><li>邀请好友</li></a>
+				<a href="#" class="chose" style="background: #62abf5;"><li style="background: url(images/left-ico1.png) no-repeat 37px -426px; color: #fff;">资产统计</li></a>
+				
+				<a href="#"><li>月度账单</li></a>
+				<a href="#"><li>银行账户</li></a>
+				<a href="#"><li>账户设置</li></a>
+			</ul>
+
+			<div class="personal-index-con-right" id="app">
+
+				
+
+				
+
+				<div class="personal-index-con-right-con">
+					<!--从这开始的列表的东西的-->
+					<div class="index-cent-r-ms-cir">
+						<div class="ms-cir-left">
+							<div id="container" style="min-width:400px;height:400px"></div>
+						</div>
+
+						<div class="ms-cir-right">
+							<h3 class="ms-cir-right-t">总资产统计明细</h3>
+
+							<ul class="ms-cir-right-cont">
+								<li>可用余额（元）</li>
+								<li>待收本金（元）</li>
+								<li>待收收益（元）</li>
+								<li>冻结金额（元）</li>
+							</ul>
+						</div>
+
+					</div>
+					
+					<div class="index-cent-r-ms-show">
+						<div class="index-cent-r-ms-show-left">
+							<h3 class="index-cent-r-ms-show-title">4856.88</h3>
+							<ul class="index-cent-r-ms-show-list">
+								<li>
+									<span>已收利息（元）</span>
+									1556.88
+								</li>
+								<li>
+									<span>红包收益（元）</span>
+									1556.88
+								</li>
+								<li>
+									<span>加息收益（元）</span>
+									1556.88
+								</li>
+								<li>
+									<span>装让收益（元）</span>
+									1556.88
+								</li>
+							</ul>
+						</div>
+
+						<div class="index-cent-r-ms-show-right">
+							<h3 class="index-cent-r-ms-show-title">4856.88</h3>
+							<ul class="index-cent-r-ms-show-list">
+								<li>
+									<span>利息管理费（元）</span>
+									1556.88
+								</li>
+								<li>
+									<span>提现手续费（元）</span>
+									1556.88
+								</li>
+								<li>
+									<span>转让奖励费（元）</span>
+									1556.88
+								</li>
+								<li>
+									<span>转让管理费（元）</span>
+									1556.88
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<ul class="index-cent-r-ms-list">
+						<li>
+							<span>245,5000,000</span>
+							累计投资金额（元）
+						</li>
+						<li>
+							<span>245,5000,000</span>
+							累计充值金额（元）
+						</li>
+						<li>
+							<span>245,5000,000</span>
+							累计提现金额（元）
+						</li>
+					</ul>
+				
+					
+					
+					<!--从这开始的列表的东西的-->
+				</div>
+
+
+				
+			
+			</div>
+
+		</div>
+	</div>
+	
+
+<script type="text/javascript">
+		var chart = null;
+		$(function () {
+			$('#container').highcharts({
+
+    	//下角标的配置的
+    	credits: {  
+    		enabled: false,  
+    		href: 'http://www.highcharts.com',  
+    		position: null,  
+    		style: null,  
+    		text: 'Highcharts.com'  
+    	}, 
+    	//这个是大背景
+    	chart: {
+    		plotBackgroundColor: null,
+    		plotBorderWidth: null,
+    		plotShadow: false,
+    		spacing : [12,12, 12, 12]
+    	},
+
+        //标题
+        title: {
+        	useHTML:'true',
+            text:"12255655",
+            x:0,
+            margin:-20,
+
+            verticalAlign:"center",
+            style:{
+            	fontSize: '24px',
+            	color:"#404652"
+            }
+
+        },
+        //副标题
+        subtitle: {
+        	text: '总资产（元）',
+        	y:170,
+        	style:{
+        		fontSize: '16px',
+        		color:"#666666"
+        	}
+        },
+        //颜色
+        colors: ['#00bcff', '#fbdd66', '#fe94ea', '#a586fd'] ,
+        //数据提示框
+        tooltip: {
+            enabled:false,//是否是显示的东西的
+            pointFormat: '{series.innerSize}: <b>{point.percentage:.1f}%</b>'
+        },
+        //图例
+        legend: {
+        	enabled:true,
+        	layout: 'vertical',
+        	backgroundColor: '#e42859',
+            // floating: true,
+            align: 'left',
+            verticalAlign: 'center',
+            x: 0,
+            y: 0,
+            //labelFormat: '<span style="{color}">{name} (click to hide or show)</span>'
+        },
+        plotOptions: {
+        	pie: {
+        		allowPointSelect: true,
+        		cursor: 'pointer',
+        		dataLabels: {
+        			enabled: true,
+        			format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        			style: {
+        				color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+        			}
+        		}
+            }
+        },
+        series: [{
+        	type: 'pie',
+        	innerSize: '80%',
+        	name: '市场份额',
+        	data: [
+        	{name:'可用余额',   y: 25, url : 'http://bbs.hcharts.cn'},
+        	['待收本金',       25],
+        	{
+        		name: '待收收益',
+        		y: 25,
+        		
+        		selected: true,
+        		url: 'http://www.hcharts.cn'
+        	},
+        	['冻结金额',    25],
+                // ['Opera',     0],
+                // ['其他',   0]
+                ]
+            }]
+        }, function(c) {
+        // 环形图圆心
+        var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+        c.setTitle({
+        	y:centerY + titleHeight/2
+        });
+        chart = c;
+    });
+		});
+
+
+	</script>
+
+	
+
+	
+</body>
+</html>
+

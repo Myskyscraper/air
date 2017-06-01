@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>月度账单</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head0.0.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-myInvestment.css">
+
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+	<script type="text/javascript" src="js/highcharts.js"></script>
+	<style type="text/css">
+		.personal-index-con-right{padding: 0 35px;}
+		.personal-index-con-right{
+			height: 1432px;
+		}
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img" data-toggle="modal" data-target=".bs-example-modal-lg">
+				<img src="images/account-cent-nam.png"/>
+				<span class="account-vip-dj vip2"></span>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie unable1" data-toggle="tooltip-right" title="手机认证"></a>
+					<a href="#" class="personal-index-head-alink-user unable2" data-toggle="tooltip-right" title="银行存管"></a>
+					<a href="#" class="personal-index-head-alink-bank" data-toggle="tooltip-right" title="银行卡绑定"></a>
+				</div>
+			</div>
+			
+			<div class="personal-index-head-title">
+				<p>尽情享受你的美好投资时间的</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">129,999.30</div>
+				<span class="personal-index-head-money_total1">45,565,656.00</span>
+
+				<span class="personal-index-head-money_total2">25,656,565.00 <img src="images/quent.png" data-toggle="tooltip-right" title="累计收益说明：已获收益的总计"/></span>	
+			</div>
+
+		</div>
+	</div>	
+	<!-- home-page信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" class="chose personal-left-list1 chose1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 "><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4"><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10 "><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+
+			<div class="personal-index-con-right">
+
+				<div class="personal-index-con-right-con">
+					
+					<div class="personal-monthBilltit">
+						<div class="monthBill-logo">
+							<h4>每月清晰了解投资变化，资产变动一目了然</h4>
+							<p>点滴积累放所有，保持努力哦。</p>
+						</div>
+						<div class="monthBill-special">
+						
+							<div class="xuanzeBtn">
+								<span>2017年2月份</span>（01~28日）总资产排名&nbsp;&nbsp;<img class="bottomShow" src="images/xiasan.png"/>
+								
+								<ul class="bottomShowCon">
+									<li>2017年2月份</li>
+									<li>2017年1月份</li>
+									<li>2016年12月份</li>
+								</ul>
+
+
+							</div>
+							<p><span>NO.</span>100</p>
+							<h4>当月投资：12345.00元</h4>
+						</div>
+					</div>
+					<ul class="personal-monthBillList">
+							<li class="month-show-li1">
+								<h5>84500.00</h5>
+								<p>当月充值（元）</p>
+							</li>
+							<li class="month-show-li2">
+								<h5>2456.00</h5>
+								<p>当月提现（元）</p>
+							</li>
+							<li class="month-show-li3">当月回款:123456.00</li>
+					</ul>
+				
+					<!-- 资产走势 -->
+					<div class="month-zoushi">
+						<p class="month-table-tit"><img src="images/zoushi.png"/>&nbsp;&nbsp;资产走势<span>&nbsp;&nbsp;(每月日均净资产走势)</span></p>
+
+						<ul class="month-zoushi-list">
+							<li class="month-zoushi-li1">上月您的总资产到达了</li>
+							<li class="month-zoushi-li2">3950000</li>
+							<li class="month-zoushi-li3">+1.3%</li>
+						</ul>
+						
+						<div class="month-zoushi-table-con">
+							<div id="container" style="min-width:600px;height:235px"></div>
+						</div>
+
+					</div>
+
+					<!-- 收益对比 -->
+					
+					<div class="month-duibi">
+					<p class="month-table-tit"><img src="images/duibi.png"/>&nbsp;&nbsp;收益对比<span>&nbsp;&nbsp;(近6个月资产走势)</span></p>
+						<div class="month-duibi-table-con">
+							<div id="container2" style="min-width:595px;height:240px"></div>
+						</div>
+
+						<ul class="month-duibi-list">
+							<li class="month-duibi-li1">12345.00<span>元</span></li>
+							<li class="month-duibi-li2">12<span>笔</span></li>
+							<li class="month-duibi-li3">12345.00<span>元</span></li>
+						</ul>
+					</div>
+					<!-- 投资分布 -->
+					<div class="month-fenbu">
+						<p class="month-table-tit"><img src="images/fenbu.png"/>&nbsp;&nbsp;投资分布<span>&nbsp;&nbsp;(近6个月资产走势)</span></p>
+						
+						<div class="month-fenbu-list">
+							<table  class="table">
+								<tr id="table-tit">
+									<td>期限</td>
+									<td>占比（%）</td>
+									<td>投资金额（元）</td>
+								</tr>
+								<tr>
+									<td class="biaowei"><img src="images/c1.png"/>&nbsp;&nbsp;天标</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									
+								</tr>
+
+								<tr>
+									<td class="biaowei"><img src="images/c2.png"/>&nbsp;&nbsp;1~3个月</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									
+								</tr>
+
+								<tr>
+									<td class="biaowei"><img src="images/c4.png"/>&nbsp;&nbsp;6~12个月</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									
+								</tr>
+
+								<tr>
+									<td class="biaowei"><img src="images/c5.png"/>&nbsp;&nbsp;18个月</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									
+								</tr>
+
+								<tr>
+									<td class="biaowei"><img src="images/c3.png"/>&nbsp;&nbsp;24个月</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+								
+								</tr>
+							</table>
+						</div>
+
+						<div class="month-fenbu-table-con">
+							<div id="container3" style="min-width:415px;height:268px"></div>
+						</div>
+					</div>
+				</div>			
+			</div>
+
+		</div>
+	</div>
+<script type="text/javascript">
+	 
+
+	// 折线统计图
+	var chart = new Highcharts.Chart('container', {
+	//下角标的配置的
+    	credits: {  
+    		enabled: false,  
+    		href: 'http://www.highcharts.com',  
+    		position: null,  
+    		style: null,  
+    		text: 'Highcharts.com'  
+    	}, 
+   	title: {
+   		
+        text: '',
+        x: -20
+    },
+    
+    xAxis: {
+        categories: ['一月', '二月', '三月', '四月', '五月', '六月']
+    },
+    yAxis: {
+    	 
+    	// tickPositions: [0, 5, 10, 15,20],
+     //    plotLines: [{
+     //        value: 5000,
+     //        width: 1,
+     //        color: '#808080',
+     //    }]
+
+      			max:50, // 定义Y轴 最大值  
+                min:0, // 定义最小值  
+                minPadding: 0.2,   
+                maxPadding: 0.2,  
+                tickInterval:5, // 刻度值  
+                title: {  
+                	text: '单位(k)'  
+                },  
+            },
+    tooltip: {
+        valueSuffix: 'k'
+    },
+    legend: {
+         enabled: false
+    },
+    series: [ {
+        name: '资产',
+        data: [20.9, 22.2, 25.7, 30.5, 32.9, 34.2]
+    }]
+});
+
+	// 柱状统计图
+	$(function () {
+    $('#container2').highcharts({
+    	//下角标的配置的
+    	credits: {  
+    		enabled: false,  
+    		href: 'http://www.highcharts.com',  
+    		position: null,  
+    		style: null,  
+    		text: 'Highcharts.com'  
+    	}, 
+    	title: {
+
+    		text: '',
+    		x: -20
+    	},
+        chart: {
+            type: 'column'
+        },
+        xAxis: {
+        	lineWidth:2,
+            categories: [
+                '一月',
+                '二月',
+                '三月',
+                '四月',
+                '五月',
+                '六月'
+            ],
+            crosshair: true
+
+        },
+        yAxis: {
+
+            max:50, // 定义Y轴 最大值  
+            min:0, // 定义最小值  
+            minPadding: 0.2,   
+            maxPadding: 0.2,  
+            tickInterval:5, // 刻度值  
+            title: {  
+                text: ''  
+             },  
+        },
+        colors: ['#00b2ff', '#00b2ff', '#00b2ff', '#00b2ff','#ffb24d'] ,
+        tooltip: {
+        	valueSuffix: '元'
+        },
+        legend: {
+        	enabled: false
+        },
+        plotOptions: {
+            column: {
+                pointPadding: 0.2,
+                borderRadius: 18
+
+            }
+        },
+        series: [{
+            name: '收益',
+            data: [19, 25, 32, 35, 44, 40]
+        }]
+    });
+});
+
+
+// 饼图
+
+var chart = null;
+		$(function () {
+			$('#container3').highcharts({
+
+    	//下角标的配置的
+    	credits: {  
+    		enabled: false,  
+    		href: 'http://www.highcharts.com',  
+    		position: null,  
+    		style: null,  
+    		text: 'Highcharts.com'  
+    	}, 
+    	//这个是大背景
+    	chart: {
+    		plotBackgroundColor: null,
+    		plotBorderWidth: null,
+    		plotShadow: false,
+    		spacing : [5 ,5, 5, 5]
+    	},
+        //标题
+        title: {
+        	useHTML:'true',
+            text:"1",
+            x:0,
+            margin:-20,
+
+            verticalAlign:"center",
+            style:{
+            	fontSize: '24px',
+            	color:"#404652",
+            	display:"none"
+            }
+
+        },
+        //副标题
+        subtitle: {
+        	text: '总资产（元）',
+        	y:120,
+        	style:{
+        		fontSize: '16px',
+        		color:"#666666",
+        		display:"none"
+        	}
+        },
+        //颜色
+        colors: ['#00bcff', '#fbdd66', '#75e75b', '#a586fd','#fe94ea'] ,
+        //数据提示框
+        tooltip: {
+            enabled:false,//是否是显示的东西的
+            pointFormat: '{series.innerSize}: <b>{point.percentage:.1f}%</b>'
+        },
+        //图例
+        legend: {
+        	enabled:false,
+        	layout: 'vertical',
+        	backgroundColor: '#e42859',
+            // floating: true,
+            align: 'left',
+            verticalAlign: 'center',
+            x: 0,
+            y: 0,
+            //labelFormat: '<span style="{color}">{name} (click to hide or show)</span>'
+        },
+        plotOptions: {
+        	pie: {
+        		allowPointSelect: true,
+        		cursor: 'pointer',
+        		dataLabels: {
+        			enabled: false,
+        			
+        			style: {
+        				color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+        			}
+        		}
+            }
+        },
+        series: [{
+        	type: 'pie',
+        	innerSize: '70%',
+        	name: '市场份额',
+        	data: [
+		        	['天标',20],
+		        	['1~3个月', 20],
+		        	['6~12个月',20],
+		        	['18个月',20],
+		        	['24个月', 20]
+                ]
+            }],
+            
+        }, function(c) {
+        // 环形图圆心
+        var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+        c.setTitle({
+        	y:centerY + titleHeight/2
+        });
+        chart = c;
+    });
+		});
+		// 下拉的样式的
+		$(".bottomShow").click(function(){
+			$(".bottomShowCon").slideToggle();
+		});
+		$(".bottomShowCon li").click(function(){
+			//console.log($(this).text());
+			var val = $(this).text();
+			$(this).parent().slideUp();
+			$(".xuanzeBtn span").text(val);
+
+		})
+</script>
+
+</body>
+</html>
+

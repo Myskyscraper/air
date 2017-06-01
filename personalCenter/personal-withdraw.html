@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>提现</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-myInvestment.css">
+	
+	<link rel="stylesheet" href="css/calendar.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+
+
+	<style type="text/css">
+		ul, ol, li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie"></a>
+					<a href="#" class="personal-index-head-alink-user"></a>
+					<a href="#" class="personal-index-head-alink-bank"></a>
+				</div>
+			</div>
+			<div class="personal-index-head-title">
+				<p>终于等到你,准备好开启理财之旅了吗？</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+				<span class="personal-index-head-money_total2">5656565.00 </span>	
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 我的投资信息 -->
+	<div class="personal-index-bg" style="height: 804px;">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" class=" personal-left-list1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 "><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4 "><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5 "><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6 chose6"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10"><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+
+
+			<div class="personal-index-con-right" style="height: 775px;">
+				<div class="index-withdraw">
+					
+					<ul class="index-withcon">
+						<li>提现至银行卡&nbsp;:&nbsp;<span>3218</span><span>********</span><span>3218</span>&nbsp;|&nbsp;<span>建设银行</span></li>
+						<li>可提现的金额&nbsp;:&nbsp;<span>9780000.00</span>元</li>
+						<li class="shuruMoney">提现金额：<input type="text" value="十元起提" /> <mark class="tianxiantips">提现金额大于10元</mark></li>
+						<li class="linahanghao">联行号：<input type="text" /> 
+							<p>大额提现必须填写联行行号,<a href="">点击查询联行行号</a>。</p>
+						</li>
+						<li>
+							提现手续费&nbsp;:&nbsp;<span>10元</span>
+							
+						</li>
+						<li>实际到账金额&nbsp;:&nbsp;<span>9780000.00元</span></li>
+						<li>每月免费提现次数<span>10</span>次,本月剩余<span>3</span>次<li>
+						<button class="btn withdrawbtn btn-primary">确认提现</button>
+					</ul>
+					
+
+					<ul class="index-withruler">
+						<h4>温馨提示</h4>
+						<li>1. 每月前10笔提现免费，超过10笔按2元／笔收取提现手续费。</li>
+						<li>2. 江西银行电子交易账户采用同卡进出设置，资金只能提现至您本人充值的银行卡，线下充值也将提现至您的绑定银行卡。</li>
+						<li>3. 实时提现：支持5万（不含5万）以下资金提现，每日限制提现10次。</li>
+						<li>4. 大额提现：支持5万（含5万）以上资金提现，工作日（周一至周五）9:00-16:45进行处理，平均两小时内到账，依据发卡行不同略有差异。</li>
+						<li>5. 如有其他疑问，请在工作时间联系沪商财富客服（400-821-7008）或江西银行客服（400-789-6266）。</li>
+					</ul>
+
+
+				</div>
+	
+			</div>
+		</div>
+	</div> 
+<script type="text/javascript">
+
+	$(".shuruMoney input").keyup(function(){
+		var num = $(this).val();
+		
+		if(num>50000){
+			$(".linahanghao").css({"display":"block"});
+		}else{
+			$(".linahanghao").css({"display":"none"});
+		}
+
+	})
+
+</script>
+
+</body>
+</html>

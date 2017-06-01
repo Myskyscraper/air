@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>后台个人中心我的投资</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-myInvestment.css">
+
+	<link rel="stylesheet" href="css/calendar.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+
+	<style type="text/css">
+		ul, ol, li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.personal-left-list2 li{
+			color: #fff;
+			background: url(images/left-ico1.png) no-repeat 37px -50px;
+		}
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie"></a>
+					<a href="#" class="personal-index-head-alink-user"></a>
+					<a href="#" class="personal-index-head-alink-bank"></a>
+				</div>
+			</div>
+			<div class="personal-index-head-title">
+				<p>尽情享受你的美好投资时间的</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+				<span class="personal-index-head-money_total2">5656565.00 </span>	
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 我的投资信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" class=" personal-left-list1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 chose"><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4"><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10"><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+
+
+			<div class="personal-index-con-right">
+				<ul class="personal-myInvest-nav" role="tablist">
+					<li role="presentation" ><a href="myInvestment-ing.html">投资中的项目</a></li>
+					<li role="presentation" ><a href="myInvestment-has.html" >已完成投资</a></li>
+					<li role="presentation" class="active"><a href="" aria-controls="myInvestment-transfer" role="tab" data-toggle="tab">可转让债权</a></li>
+					<li role="presentation"><a href="myInvestment-roll.html" >转出的债权</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div role="tabpanel" class="tab-pane active" id="myInvestment-ing">
+						<!-- 表内顶部选项的 -->
+						 <div class="personal-Inp-calender">
+							 <div class="personal-Inp-xuanzhong">
+							 	<span style="color: #bcc1cc;">标状态</span>
+							 	<select name="select" id="select_k1" class="xla_k">
+							 	
+							 		<option value="记息中">计息中</option>
+							 		<option value="选择品牌1">选择品牌1</option>
+							 		<option value="选择品牌2">选择品牌2</option>
+							 	</select>
+							 </div>
+
+							 <div id="demo" class="calendarBox">
+							 	<span>起始日期</span><input type="text" id="dt" ><div id="dd"></div>
+							 	<span>到</span><input type="text" id="dt1"><div id="dd1"></div>
+							 </div>
+
+							 <div class="psrsonal-scale">
+							 	<img src="images/scale.png"/>
+							 </div>
+								
+						</div>
+						<div class="personal-myInvest-ing">
+
+							<table  class="table">
+								<tr class="active " id="table-tit">
+									<td>标的名称</td>
+									<td>期数</td>
+									<td>投标时间</td>
+									<td>转让金额</td>
+									<td>状态</td>
+									<td>操作</td>
+								</tr>
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td class="more-detail">
+										详情
+										<div class="more-detail-con">
+											<a href="">查看协议</a>
+											<a href="">交易凭证</a>
+											<a href="">项目凭证</a>
+										</div>
+									</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+								
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+
+								<tr>
+									<td>宝马523L抵押贷款</td>
+									<td>13.4</td>
+									
+									<td>2017-3-14 16:29</td>
+									<td>11个月29天</td>
+									<td>￥32900.00</td>
+									
+									<td>详情</td>
+								</tr>
+								
+
+
+							</table>
+
+							<nav aria-label="Page navigation">
+								<ul class="pagination">
+									<li>
+										<a href="#" aria-label="Previous">
+											<span aria-hidden="true">&laquo;</span>
+										</a>
+									</li>
+									<li><a href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li><a href="#">4</a></li>
+									<li><a href="#">5</a></li>
+									<li><a href="#">6</a></li>
+									<li><a href="#">7</a></li>
+									<li><a href="#">8</a></li>
+									<li><a href="#">9</a></li>
+									<li><a href="#">10</a></li>
+									<li>
+										<a href="#" aria-label="Next">
+											<span aria-hidden="true">&raquo;</span>
+										</a>
+									</li>
+								</ul>
+							</nav>	
+
+							<ul class="index-withruler">
+								<h4>温馨提示：</h4>
+								<li>(1) 债权持有不满3个月的转让管理费为转让价格的1%;</li>
+								<li>(2) 持有超过3个月（包括3个月）以上转让管理费为转让价格的0.5%;</li>
+								<li>(3) 手续费不足1元的按1元计;</li>
+								<li>(4) 手续费不提前收取，等债权转让时收取;</li>
+								<li>(5) 每笔根据购买债权人的付款扣除手续费后打到债权转让人账户。</li>
+								<li>(6) 审核时间为工作时间(09:00-18:00)，如有特殊情况，请拨打客服电话:400-821-7008 。</li>
+							</ul>	
+
+
+
+
+
+
+	
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+		</div>
+	</div>
+	<script src="js/calendar.js"></script> 
+	<script type="text/javascript">
+
+		$('#ca').calendar({
+        widtd: 320,
+        height: 320,
+        data: [
+			{
+			  date: '2015/12/24',
+			  value: 'Christmas Eve'
+			},
+			{
+			  date: '2015/12/25',
+			  value: 'Merry Christmas'
+			},
+			{
+			  date: '2016/01/01',
+			  value: 'Happy New Year'
+			}
+		],
+        onSelected: function (view, date, data) {
+            console.log('view:' + view)
+            alert('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+
+    $('#dd').calendar({
+        trigger: '#dt',
+        zIndex: 999,
+		format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+
+
+    $('#dd1').calendar({
+        trigger: '#dt1',
+        zIndex: 999,
+		format: 'yyyy-mm-dd',
+        onSelected: function (view, date, data) {
+            console.log('event: onSelected')
+        },
+        onClose: function (view, date, data) {
+            console.log('event: onClose')
+            console.log('view:' + view)
+            console.log('date:' + date)
+            console.log('data:' + (data || 'None'));
+        }
+    });
+
+	</script>
+
+
+</body>
+</html>

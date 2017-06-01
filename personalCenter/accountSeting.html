@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>账户设置</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-myInvestment.css">
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+
+	<style type="text/css">
+		ul, ol, li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+		.personal-index-bg{
+			min-height: 837px;
+		}
+		.personal-index-con-right{height:780px;}
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie"></a>
+					<a href="#" class="personal-index-head-alink-user"></a>
+					<a href="#" class="personal-index-head-alink-bank"></a>
+				</div>
+			</div>
+			<div class="personal-index-head-title">
+				<p>终于等到你,准备好开启理财之旅了吗？</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+				<span class="personal-index-head-money_total2">5656565.00 </span>	
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 我的投资信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" class=" personal-left-list1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 "><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4 chose"><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10"><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+
+
+			<div class="personal-index-con-right">
+				<div class="personal-Seting-con">
+					<p>当前账户完成度：&nbsp;<span>60%</span><a class="logintime">上次登录时间为：2017-04-10  17：44</a></p>
+
+					<div class="progress">
+						<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
+							<span class="sr-only">60% Complete</span>
+						</div>
+					</div>
+					<hr/>
+					<ul class="ersonal-Seting-list">
+						<li>
+							 <h3>
+							 	江西银行存管账户<br/>
+							 	<span>资金存储于该银行账户，存管剥离，确保交易安全</span>
+							 </h3>
+							<h4>
+								<img src="images/duihao.png"/>&nbsp;已开启<br/>
+								<span>99300</span><span>********</span><span>5644</span>
+							</h4>
+							
+							<a data-toggle="modal" data-target="#foo1">查看</a>
+						</li>
+
+						<li>
+							 <h3>
+							 	实名认证<br/>
+							 	<span>需要通过公安部门实名认证才能进行投资、借款等交易，不可修改</span>
+							 </h3>
+							<h4>
+								<img src="images/duihao.png"/>&nbsp;已认证<br/>
+								<span>胡</span><span>**</span><span></span>
+							</h4>
+							
+						</li>
+
+						<li>
+							 <h3>
+							 	绑定银行卡<br/>
+							 	<span>提现仅可至您绑定的银行卡账户中，更换银行卡需要账户总资产为0</span>
+							 </h3>
+							<h4>
+								<img src="images/duihao.png"/>&nbsp;已绑定<br/>
+								<span>99300</span><span>********</span><span>5644</span>
+							</h4>
+							<a href="bankSeting.html">查看</a>
+						</li>
+
+						<li>
+							 <h3>
+							 	交易密码<br/>
+							 	<span>须在投标、提现等交易时使用，保障资金安全</span>
+							 </h3>
+							<h4>
+								<img src="images/duihao.png"/>&nbsp;已设置<br/>
+								<span>99300</span><span>********</span><span>5644</span>
+							</h4>
+							<a >修改</a>
+						</li>
+
+						<li>
+							 <h3>
+							 	手机认证<br/>
+							 	<span>用于接收验证码及账户资金变动等通知</span>
+							 </h3>
+							<h4>
+								<img src="images/duihao.png"/>&nbsp;已认证<br/>
+								<span>182</span><span>****</span><span>5644</span>
+							</h4>
+							<a data-toggle="modal" data-target="#foo2">修改</a>
+						</li>
+
+						<li>
+							 <h3>
+							 	登录密码<br/>
+							 	<span>登录沪商财富网站及app时输入需要</span>
+							 </h3>
+							<h4>
+								<img src="images/duihao.png"/>&nbsp;已设置<br/>
+								<span>********</span>
+							</h4>
+							<a data-toggle="modal" data-target="#foo3">修改</a>
+						</li>
+
+
+						<li>
+							 <h3>
+							 	绑定邮箱<br/>
+							 	<span>用于接收网站相关消息及设置</span>
+							 </h3>
+
+							<h4 class="nowrite">
+								<img src="images/gantanhao.png"/>&nbsp;未绑定<br/>
+								
+							</h4>
+							<a data-toggle="modal" data-target="#foo4">绑定</a>
+						</li>
+
+
+						<li>
+							 <h3>
+							 	联系地址<br/>
+							 	<span>发放实物奖励及其他内容时需要</span>
+							 </h3>
+							<h4 class="nowrite">
+								<img src="images/gantanhao.png"/>&nbsp;未填写<br/>
+							</h4>
+							<a data-toggle="modal" data-target="#foo5">添加</a>
+						</li>
+							
+					</ul>
+
+
+
+
+
+				</div>
+				
+			</div>
+
+
+		</div>
+	</div>
+	
+	
+
+
+<!-- 弹出框的 -->
+		<!-- 江西银行账户 -->
+		<!-- data-toggle="modal" data-target=".bs-example-modal-lg" -->
+		<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="foo1">
+			<div class="modal-dialog modal-lg" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">江西银行存管账户</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="modal-con">
+							<span class="modal-con-list1">310015193609315672</span>
+							<span class="modal-con-list2">15911984728</span>
+							<span class="modal-con-list3">9300030010006311223</span>
+							<span class="modal-con-list4">王君君</span> 
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	   <!-- 修改手机号 -->
+		<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="foo2">
+			<div class="modal-dialog modal-lg" role="document" >
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">修改手机号</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="modal-mobile">
+							<ul class="modal-mobile-tit">
+								<li class="modal-mobile-tit-active">①验证原手机号</li>
+								<li>②设置新手机号</li>
+								<li>③完成设置</li>
+							</ul>
+							
+							<div class="modal-mobile-cons">
+									<ul class="form-horizontal oldstation-con-detail-right modal-mobile-con1">
+										<li class="modal-mobile-con1-t"">
+											<span>登录用户名:&nbsp;&nbsp;</span>王君君
+										</li>
+										<li>
+											<span>原手机号:</span>&nbsp;&nbsp;<input type="text" name="">
+											<p>输入格式有误</p>
+										</li>
+
+										<li>
+											<span>手机验证:</span>&nbsp;&nbsp;<input type="text" class="detail-right2"><mark>获取验证码</mark>
+											<p>验证码将发至136****0123</p>
+										</li>
+
+										<button class="btn btn-primary zhaungyiBtn">确认设置</button>
+									</ul>
+
+
+									<ul class="form-horizontal oldstation-con-detail-right modal-mobile-con2">
+										<li>
+											<span>新手机号:</span>&nbsp;&nbsp;<input type="text" name="">
+											<p>输入格式有误</p>
+										</li>
+
+										<li>
+											<span>手机验证:</span>&nbsp;&nbsp;<input type="text" class="detail-right2"><mark>获取验证码</mark>
+											<p>验证码将发至136****0123</p>
+										</li>
+										<p class="modal-mobile-con2-tip">确认更改手机号，风险责任本人承担</p>
+										<button class="btn btn-primary zhaungyiBtn">确认设置</button>
+									</ul>
+
+
+									<ul class="form-horizontal oldstation-con-detail-right modal-mobile-con3">
+										<img src="images/success.png"/>
+										<p class="modal-mobile-con3-tip">您已将绑定的银行卡预留手机号修改为：<span>14538472947</span>，请注意保存</p>
+									</ul>
+								
+							</div>
+
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 修改密码 -->
+		<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="foo3">
+			<div class="modal-dialog modal-lg" role="document" >
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">修改登录密码</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="modal-mima-con">
+							<form class="form-horizontal">
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">原密码</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">新密码</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">确认密码</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+
+
+								
+
+								<button type="button" class="btn btn-primary save-btn" aria-label="Close">保存设置</button>
+
+							</form>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 绑定邮箱 -->
+			<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="foo4">
+			<div class="modal-dialog modal-lg" role="document" >
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">绑定邮箱</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="modal-mima-con">
+							<form class="form-horizontal">
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">电子邮箱</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">备注</label>
+									<div class="col-sm-7">
+										<textarea class="form-control" id="inputEmail3"></textarea>  
+									</div>
+									
+								</div>
+
+								<p class="youxiang">绑定邮箱邮件已发送,请查看邮件根据提示操作。</p>								
+
+								<button type="button" class="btn btn-primary save-btn" aria-label="Close">绑定邮箱</button>
+
+							</form>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+		<!-- 联系地址 -->
+
+		<div class="modal fade bs-example-modal-lg1" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" id="foo5">
+			<div class="modal-dialog modal-lg" role="document" >
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title">联系人地址</h4>
+					</div>
+
+					<div class="modal-body">
+						<div class="modal-mima-con">
+							<form class="form-horizontal">
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">收货人</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">手机号码</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+
+								<div class="form-group">
+									<label for="inputEmail3" class="col-sm-3 control-label">收货地址</label>
+									<div class="col-sm-7">
+										<input type="text" class="form-control" id="inputEmail3" >
+									</div>
+									<span class="modal-mima-con-mima-tipls">要修改的</span>
+								</div>
+								<button type="button" class="btn btn-primary save-btn" aria-label="Close">提交</button>
+
+							</form>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	$(".modal-mobile-tit li").click(function(){
+		var index = $(this).index();
+		console.log(index);
+		$(this).addClass("modal-mobile-tit-active").siblings().removeClass("modal-mobile-tit-active");
+		$(".modal-mobile-cons ul").eq(index).show().siblings().hide();
+	})
+
+
+</script>
+</body>
+</html>

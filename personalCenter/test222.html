@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link href="css/jquery.Jcrop.min.css" rel="stylesheet">
+	<link href="css/uploadify.css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+		.main {
+	 		margin: 0 auto;
+	 		padding: 15px;
+	 		width: 750px;
+	 		font-family: "microsoft yahei";
+	 	}
+	 	.upload-area {
+	 		position: relative;
+	 		float: left;
+	 		margin-right: 30px;
+	 		width: 200px;
+	 		height: 200px;
+	 		background-color: #F5F5F5;
+	 		border: 2px solid #E1E1E1;
+	 	}
+
+	 	.update-pic .crop {
+	 		float: left;
+	 		margin-bottom: 20px;
+	 		margin-top: 10px;
+	 		overflow: hidden;
+	 	}
+
+	 	.tcrop {
+	 		clear: right;
+	 		font-size: 14px;
+	 		font-weight: bold;
+	 	}
+
+	 	.reupload-img {
+	 		float: right;
+	 	}
+	 	account-daishoumx.css:1588
+	 	.grse-sztx-a {
+	 		display: block;
+	 		width: 141px;
+	 		height: 42px;
+	 		border-radius: 3px;
+	 		text-align: center;
+	 		line-height: 42px;
+	 		color: #fff;
+	 		font-size: 14px;
+	 		background-color: #1c9bfe;
+	 	}
+
+	 	.uploadify-button.disabled {
+	background-color: #D0D0D0;
+	color: #808080;
+}
+.uploadify-queue-item {
+	background-color: #F5F5F5;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	font: 11px Verdana, Geneva, sans-serif;
+	margin-top: 5px;
+	max-width: 350px;
+	padding: 10px;
+}
+.uploadify-error {
+	background-color: #FDE5DD !important;
+}
+.uploadify-queue-item .cancel a {
+	background: url('./uploadify-cancel.png') 0 0 no-repeat;
+	float: right;
+	height:	16px;
+	text-indent: -9999px;
+	width: 16px;
+}
+.uploadify-queue-item.completed {
+	background-color: #E5E5E5;
+}
+.uploadify-progress {
+	background-color: #E5E5E5;
+	margin-top: 10px;
+	width: 100%;
+}
+.uploadify-progress-bar {
+	background-color: #0099FF;
+	height: 3px;
+	width: 1px;
+}
+#editor_img { 
+	width: 28px; 
+	height: 28px; 
+}
+#editor_img .upload-image{ 
+	opacity: 0; 
+	filter: alpha(opacity=0); 
+}
+.uploadify-button,.upload-case{ 
+/*	width: 116px; 
+	height: 36px;*/ 
+	background-color: #fff; 
+	border-radius: 0; 
+}
+
+/*----------------------------------*/
+.uploadify-button {
+    line-height: 120px!important;
+    text-align: center;
+}
+
+
+.uploadify-button, .upload-case {
+    background-color: #fff;
+    border-radius: 0;
+}
+
+.upload-area .file-tips {
+    position: absolute;
+    top: 90px;
+    left: 0;
+    padding: 0 15px;
+    width: 170px;
+    line-height: 1.4;
+    font-size: 12px;
+    color: #A8A8A3;
+    text-align: center;
+}
+
+
+.save-pic {
+    float: left;
+}
+
+
+.grse-sztx-a {
+    display: block;
+    width: 141px;
+    height: 42px;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 42px;
+    color: #fff;
+    font-size: 14px;
+    background-color: #1c9bfe;
+}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<form action="/member-center/avatar-upload" method="post" id="pic" class="update-pic cf">
+
+			<div class="upload-area">
+				<div id="user-pic" class="uploadify" style="height: 200px; width: 200px;"><object id="SWFUpload_0" type="application/x-shockwave-flash" data="/statics/plugs/uploadify/uploadify.swf?preventswfcaching=1493717035915" width="200" height="200" class="swfupload" style="position: absolute; z-index: 1;"><param name="wmode" value="transparent"><param name="movie" value="/statics/plugs/uploadify/uploadify.swf?preventswfcaching=1493717035915"><param name="quality" value="high"><param name="menu" value="false"><param name="allowScriptAccess" value="always"><param name="flashvars" value="movieName=SWFUpload_0&amp;uploadURL=%2Fmember-center%2Fupload-img&amp;useQueryString=false&amp;requeueOnError=false&amp;httpSuccess=&amp;assumeSuccessTimeout=30&amp;params=sessionId%3Dfslopor3jkosmm46q1l9jrl932%26amp%3B_csrf%3DYVUyaE5uamwSEGtddxtTA1YbSl0FJzUbUBZlOw0oPiQtMUtQAwo5Jw%253D%253D&amp;filePostName=avatar&amp;fileTypes=*.jpg%3B%20*.png%3B%20*.gif%3B&amp;fileTypesDescription=All%20Files&amp;fileSizeLimit=0&amp;fileUploadLimit=0&amp;fileQueueLimit=1&amp;debugEnabled=false&amp;buttonImageURL=&amp;buttonWidth=200&amp;buttonHeight=200&amp;buttonText=&amp;buttonTextTopPadding=0&amp;buttonTextLeftPadding=0&amp;buttonTextStyle=color%3A%20%23000000%3B%20font-size%3A%2016pt%3B&amp;buttonAction=-100&amp;buttonDisabled=false&amp;buttonCursor=-2"></object><div id="user-pic-button" class="uploadify-button " style="height: 200px; line-height: 200px; width: 200px;"><span class="uploadify-button-text"><i class="userup-icon"></i>上传头像</span></div></div><div id="user-pic-queue" class="uploadify-queue"></div>
+				<div class="file-tips">支持JPG,PNG,GIF，图片小于1MB，尺寸不小于100*100,真实高清头像更受欢迎！</div>
+				<div class="preview hidden" id="preview-hidden"></div>
+			</div>
+			<div class="preview-area">
+				<input type="hidden" id="x" name="x">
+				<input type="hidden" id="y" name="y">
+				<input type="hidden" id="w" name="w">
+				<input type="hidden" id="h" name="h">
+				<input type="hidden" id="img_src" name="src">
+				<div class="tcrop">头像预览</div>
+				<div class="crop crop100 grse-sztx-img" style="margin-left:0px;"><img id="crop-preview-100" src="images/touxiang.jpg" alt=""></div>
+			</div>
+			<div style="clear:both"></div>
+			<div class="btn-box">
+				<a class="grse-sztx-a save-pic" href="javascript:;">保存</a>
+				<a class="grse-sztx-a reupload-img" href="javascript:$('#user-pic').uploadify('cancel','*');">重新上传</a>
+			</div>
+		</form>
+	</div>
+
+
+</body>
+<script src="js/jquery.uploadify-3.1.js"></script>
+<script src="js/jquery.Jcrop.min.js"></script>
+<script type="text/javascript">
+function load(){
+	//上传头像(uploadify插件)
+		$("#user-pic").uploadify({
+			'queueSizeLimit' : 1,
+			'removeTimeout' : 0.5,
+			'preventCaching' : true,
+			'fileObjName':'avatar',
+			'multi'    : false,
+		    'formData'     : {
+			        'sessionId' : 'fslopor3jkosmm46q1l9jrl932',
+					'_csrf'     : $("meta[name='csrf-token']").attr('content')
+				},
+			'swf' 			: 'images/uploadify.swf',
+			'uploader' 		: '/member-center/upload-img',
+			'buttonText' 	: '<i class="userup-icon"></i>上传头像',
+			'width' 		: '200',
+			'height' 		: '200',
+			'fileTypeExts'	: '*.jpg; *.png; *.gif;',
+			'onUploadError' :function(file, data, msg){
+			    console.log(msg);
+		    },
+			'onUploadSuccess' : function(file, data, response){
+				//调试语句
+				console.log(data);
+		
+				var data = $.parseJSON(data);
+				if(data['status'] == 0){
+					alert(data['msg']);
+					return;
+				}
+				var preview = $('.upload-area').children('#preview-hidden');
+				preview.show().removeClass('hidden');
+				//两个预览窗口赋值
+				$('.crop').children('img').attr('src',data['path']+'?random='+Math.random());
+				//隐藏表单赋值
+				$('#img_src').val(data['path']);
+				//绑定需要裁剪的图片
+				var img = $('<img />');
+				preview.append(img);
+				preview.children('img').attr('src',data['path']+'?random='+Math.random());
+				var crop_img = preview.children('img');
+				crop_img.attr('id',"cropbox").show();
+				var img = new Image();
+				img.src = data['path']+'?random='+Math.random();
+				//根据图片大小在画布里居中
+				img.onload = function(){
+					var img_height = 0;
+					var img_width = 0;
+					var real_height = img.height;
+					var real_width = img.width;
+					if(real_height > real_width && real_height > 200){
+						var persent = real_height / 200;
+						real_height = 200;
+						real_width = real_width / persent;
+					}else if(real_width > real_height && real_width > 200){
+						var persent = real_width / 200;
+						real_width = 200;
+						real_height = real_height / persent;
+					}
+					if(real_height < 200){
+						img_height = (200 - real_height)/2;
+					}
+					if(real_width < 200){
+						img_width = (200 - real_width)/2;
+					}
+					preview.css({width:(200-img_width)+'px',height:(200-img_height)+'px'});
+					preview.css({paddingTop:img_height+'px',paddingLeft:img_width+'px'});
+				}
+				//裁剪插件
+				$('#cropbox').Jcrop({
+		            bgColor:'#333',   //选区背景色
+		            bgFade:true,      //选区背景渐显
+		            fadeTime:1000,    //背景渐显时间
+		            allowSelect:false, //是否可以选区，
+		            allowResize:true, //是否可以调整选区大小
+		            aspectRatio: 1,     //约束比例
+		            minSize : [100,100],//可选最小大小
+		            boxWidth : 200,		//画布宽度
+		            boxHeight : 200,	//画布高度
+		            onChange: showPreview,//改变时重置预览图
+		            onSelect: showPreview,//选择时重置预览图
+		            setSelect:[ 0, 0, 100, 100],//初始化时位置
+		            onSelect: function (c){	//选择时动态赋值，该值是最终传给程序的参数！
+			            $('#x').val(c.x);//需裁剪的左上角X轴坐标
+			            $('#y').val(c.y);//需裁剪的左上角Y轴坐标
+			            $('#w').val(c.w);//需裁剪的宽度
+			            $('#h').val(c.h);//需裁剪的高度
+		          }
+		        });
+				//提交裁剪好的图片
+				$('.save-pic').click(function(){
+					if($('#preview-hidden').html() == ''){
+						alert('请先上传图片！');
+					}else{
+						//由于GD库裁剪gif图片很慢，所以长时间显示弹出框
+				
+						$.post($("#pic").attr('action'),$("#pic").serialize(),function(data){
+						        if(data.status != 1)
+						         {
+						             alert(data.msg);
+						         }
+						         else{
+						            location.href=data.url;
+						         }
+						},'json')
+					
+					}
+				});
+				//重新上传,清空裁剪参数
+				var i = 0;
+				$('.reupload-img').click(function(){
+					$('#preview-hidden').find('*').remove();
+					$('#preview-hidden').hide().addClass('hidden').css({'padding-top':0,'padding-left':0});
+				});
+		     }
+		});
+		//预览图
+		function showPreview(coords){
+			var img_width = $('#cropbox').width();
+			var img_height = $('#cropbox').height();
+			  //根据包裹的容器宽高,设置被除数
+			  var rx = 100 / coords.w;
+			  var ry = 100 / coords.h;
+			  $('#crop-preview-100').css({
+			    width: Math.round(rx * img_width) + 'px',
+			    height: Math.round(ry * img_height) + 'px',
+			    marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+			    marginTop: '-' + Math.round(ry * coords.y) + 'px'
+			  });
+			  rx = 60 / coords.w;
+			  ry = 60 / coords.h;
+			  $('#crop-preview-60').css({
+			    width: Math.round(rx * img_width) + 'px',
+			    height: Math.round(ry * img_height) + 'px',
+			    marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+			    marginTop: '-' + Math.round(ry * coords.y) + 'px'
+			  });
+		}
+}
+
+
+
+</script>
+</html>

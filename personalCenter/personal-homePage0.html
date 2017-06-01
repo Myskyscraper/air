@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>后台个人中心首页</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simple-calendar.css" />
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head0.0.css">
+	<link rel="stylesheet" type="text/css" href="css/personalCentetr-home.css">
+	<link href="css/jquery.Jcrop.min.css" rel="stylesheet">
+
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+	<script type="text/javascript" src="js/highcharts.js"></script>
+
+	<script src="js/jquery.uploadify-3.1.js"></script>
+	<script src="js/jquery.Jcrop.min.js"></script>
+	
+	<style type="text/css">
+
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img" data-toggle="modal" data-target=".bs-example-modal-lg">
+				<img src="images/account-cent-nam.png"/>
+				<span class="account-vip-dj vip2"></span>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie unable1" data-toggle="tooltip-right" title="手机认证"></a>
+					<a href="#" class="personal-index-head-alink-user unable2" data-toggle="tooltip-right" title="银行存管"></a>
+					<a href="#" class="personal-index-head-alink-bank" data-toggle="tooltip-right" title="银行卡绑定"></a>
+				</div>
+			</div>
+			
+			<div class="personal-index-head-title">
+				<p>尽情享受你的美好投资时间的</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+
+				<span class="personal-index-head-money_total2">5656565.00 <img src="images/quent.png" data-toggle="tooltip-right" title="累计收益说明：已获收益的总计"/></span>	
+			</div>
+
+		</div>
+	</div>	
+	<!-- home-page信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" class="chose personal-left-list1 chose1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 "><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4"><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10 "><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+
+			<div class="personal-index-con-right" id="app">
+
+				<!-- 签约 -->
+				<div class="personal-index-con-right-contract" v-if="isContract">
+					请尽快完成 
+					<a href=""><span class="bt-qianyue" v-if="istoubiao">投标签约</span></a> 
+					<a href=""><span class="bt-qianyue" v-if="isZaiquan">债权签约</span></a>,
+					开启您的投资之旅
+				</div>
+
+				<!-- 转移-->
+				<div class="personal-index-con-right-oldweb" v-if="isZhuanyi">
+					<span style="margin-left: 17px; float: left;"><img src="images/laba.png"/> </span>
+					<p>旧站可用余额：￥<span>2458.00</span> &nbsp; &nbsp;待收总额：￥<span>2458.00</span></p>
+					<p class="personal-status-p">首页转移资金增加状态</p>
+					<div class="goOld"><a href="">前去转移</a></div>
+				</div>
+
+				<div class="personal-index-con-right-con">
+
+
+				<!-- 修改的 -->
+					<!--从这开始的列表的东西的-->
+				
+					<div class="index-centr-cir">
+
+						<div class="cir-t">
+							<span><img src="images/zichang.png"/> </span>
+							资产概览
+							<span class="shuaxin"><img src="images/shuaxin.png"/></span>
+						</div>
+
+
+						
+						
+						<div class="cir-main">
+							<div id="container" style="min-width:550px;height:320px"></div>
+						</div>
+
+
+
+						<ul class="index-cent-cirs">
+							<li class="index-cent-cirs-1">
+								<div><span style="background: #47a9b4;"></span>&nbsp;可用余额</div>
+								<div>￥999300.00</div>
+							</li>
+							<li class="index-cent-cirs-1" style="margin-left: 150px;">
+								<div><span style="background: #fd6969;"></span>&nbsp;冻结资金</div>
+								<div>
+									￥69300.00
+								</div>
+							</li>
+							<li class="index-cent-cirs-2" >
+								<div><span style="background: #ff9818;"></span>&nbsp;待收利息</div>
+								<div style="position: relative;">￥9993.00 <a class="look-more" href="#">查看更多&gt;</a></div>
+								
+							</li>
+							<li class="index-cent-cirs-2" style="margin-left: 150px;">
+								<div><span style="background: #8385ea;"></span>&nbsp;待收本金</div>
+								<div>￥9993.00</div>
+							</li>
+						</ul>
+
+						<div class="backSystemLogo">
+							<img src="images/backSystemLogo.png" />
+						</div>
+					</div>
+					<!--这是日历的东西的-->
+					<div class="index-centr-calendar">
+
+						<!------这是要填写日历------>
+							 <div id='container1'></div>
+
+						<!------这是要填写日历------>
+						
+						
+						<!--从这开始的列表的东西的-->
+						<div class="ca-mess">
+							<ul class="cal-list1">
+								<li class="tt1"><span></span>&nbsp;还款日</li>
+								<li class="tt2"><span></span>&nbsp;回款日</li>
+							</ul>
+							<ul class="cal-list2">
+								<li>
+									<div class="cal-list2-t"><span>所选日期</span></div>
+									<div class="cal-list2-s"><span>16</span></div>
+								</li>
+								
+							</ul>
+
+
+							<ul class="cal-list3">
+								<li class="cal-liss">
+									<span class="cal-list2-tt">待收本金</span>
+									<span class="cal-list-ss" style="color: #80848c">￥999300.00</span>
+								</li>
+
+								<li class="cal-liss">
+									<span class="cal-list2-tt">待收利息</span>
+									<span class="cal-list-ss">￥999300.00</span>
+								</li>
+								<li class="cal-liss">
+									<span class="cal-list2-tt">加息金额</span>
+									<span class="cal-list-ss">￥999300.00</span>
+								</li>
+							</ul>
+						</div>
+						
+					</div>
+					<!--从这开始的列表的东西的-->
+				</div>
+
+
+				<!-- 修改的 -->
+			
+			</div>
+
+		</div>
+	</div>
+
+
+
+	<!-- 弹出框的 -->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">修改头像</h4>
+				</div>
+
+				<div class="modal-body">
+
+					<div class="main">
+						<form action="/member-center/avatar-upload" method="post" id="pic" class="update-pic cf">
+
+							<div class="upload-area">
+								<div id="user-pic" class="uploadify" style="height: 200px; width: 200px;"><object id="SWFUpload_0" type="application/x-shockwave-flash" data="/statics/plugs/uploadify/uploadify.swf?preventswfcaching=1493717035915" width="200" height="200" class="swfupload" style="position: absolute; z-index: 1;"><param name="wmode" value="transparent"><param name="movie" value="/statics/plugs/uploadify/uploadify.swf?preventswfcaching=1493717035915"><param name="quality" value="high"><param name="menu" value="false"><param name="allowScriptAccess" value="always"><param name="flashvars" value="movieName=SWFUpload_0&amp;uploadURL=%2Fmember-center%2Fupload-img&amp;useQueryString=false&amp;requeueOnError=false&amp;httpSuccess=&amp;assumeSuccessTimeout=30&amp;params=sessionId%3Dfslopor3jkosmm46q1l9jrl932%26amp%3B_csrf%3DYVUyaE5uamwSEGtddxtTA1YbSl0FJzUbUBZlOw0oPiQtMUtQAwo5Jw%253D%253D&amp;filePostName=avatar&amp;fileTypes=*.jpg%3B%20*.png%3B%20*.gif%3B&amp;fileTypesDescription=All%20Files&amp;fileSizeLimit=0&amp;fileUploadLimit=0&amp;fileQueueLimit=1&amp;debugEnabled=false&amp;buttonImageURL=&amp;buttonWidth=200&amp;buttonHeight=200&amp;buttonText=&amp;buttonTextTopPadding=0&amp;buttonTextLeftPadding=0&amp;buttonTextStyle=color%3A%20%23000000%3B%20font-size%3A%2016pt%3B&amp;buttonAction=-100&amp;buttonDisabled=false&amp;buttonCursor=-2"></object><div id="user-pic-button" class="uploadify-button " style="height: 200px; line-height: 200px; width: 200px;"><span class="uploadify-button-text"><i class="userup-icon"></i>上传头像</span></div></div><div id="user-pic-queue" class="uploadify-queue"></div>
+								<div class="file-tips">支持JPG,PNG,GIF，图片小于1MB，尺寸不小于100*100,真实高清头像更受欢迎！</div>
+								<div class="preview hidden" id="preview-hidden"></div>
+							</div>
+							<div class="preview-area">
+								<input type="hidden" id="x" name="x">
+								<input type="hidden" id="y" name="y">
+								<input type="hidden" id="w" name="w">
+								<input type="hidden" id="h" name="h">
+								<input type="hidden" id="img_src" name="src">
+								<div class="tcrop">头像预览</div>
+								<div class="crop crop100 grse-sztx-img" style="margin-left:0px;"><img id="crop-preview-100" src="images/touxiang.jpg" alt=""></div>
+							</div>
+							<div style="clear:both"></div>
+							<div class="btn-box">
+								<a class="grse-sztx-a save-pic" href="javascript:;">保存</a>
+								<a class="grse-sztx-a reupload-img" href="javascript:$('#user-pic').uploadify('cancel','*');">重新上传</a>
+							</div>
+						</form>
+					</div>
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/simple-calendar.js" ></script>
+
+	<script type="text/javascript">
+
+	//判断进行旧站和债权签约；
+		var app = new Vue({
+			el: '#app',
+			data: {
+				isContract:true,
+				istoubiao:false,
+				isZaiquan:true,
+				isZhuanyi:true
+			}
+		})
+	</script>
+
+	<script type="text/javascript">
+		var chart = null;
+		$(function () {
+			$('#container').highcharts({
+
+    	//下角标的配置的
+    	credits: {  
+    		enabled: false,  
+    		href: 'http://www.highcharts.com',  
+    		position: null,  
+    		style: null,  
+    		text: 'Highcharts.com'  
+    	}, 
+    	//这个是大背景
+    	chart: {
+    		plotBackgroundColor: null,
+    		plotBorderWidth: null,
+    		plotShadow: false,
+    		spacing : [8,8, 8, 8]
+    	},
+        //标题
+        title: {
+        	
+        	useHTML:'true',
+            text:"12255655<h6><a href='' style='color:#62abf5;margin-left:28px;'>查看详情</a></h6>",
+            x:0,
+            margin:-20,
+
+            verticalAlign:"center",
+            style:{
+            	fontSize: '24px',
+            	color:"#404652"
+            }
+
+        },
+        //副标题
+        subtitle: {
+        	text: '总资产（元）',
+        	y:120,
+        	style:{
+        		fontSize: '16px',
+        		color:"#666666"
+        	}
+        },
+        //颜色
+        colors: ['#00bcff', '#fbdd66', '#fe94ea', '#a586fd'] ,
+        //数据提示框
+        tooltip: {
+            enabled:false,//是否是显示的东西的
+            pointFormat: '{series.innerSize}: <b>{point.percentage:.1f}%</b>'
+        },
+        //图例
+        legend: {
+        	enabled:true,
+        	layout: 'vertical',
+        	backgroundColor: '#e42859',
+            // floating: true,
+            align: 'left',
+            verticalAlign: 'center',
+            x: 0,
+            y: 0,
+            //labelFormat: '<span style="{color}">{name} (click to hide or show)</span>'
+        },
+        plotOptions: {
+        	pie: {
+        		allowPointSelect: true,
+        		cursor: 'pointer',
+        		dataLabels: {
+        			enabled: true,
+        			format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+        			style: {
+        				color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+        			}
+        		}
+            }
+        },
+        series: [{
+        	type: 'pie',
+        	innerSize: '80%',
+        	name: '市场份额',
+        	data: [
+        	{name:'Firefox',   y: 25, url : 'http://bbs.hcharts.cn'},
+        	['IE',       25],
+        	{
+        		name: 'Chrome',
+        		y: 25,
+        		sliced: true,
+        		selected: true,
+        		url: 'http://www.hcharts.cn'
+        	},
+        	['Safari',    25],
+                // ['Opera',     0],
+                // ['其他',   0]
+                ]
+            }]
+        }, function(c) {
+        // 环形图圆心
+        var centerY = c.series[0].center[1],
+        titleHeight = parseInt(c.title.styles.fontSize);
+        c.setTitle({
+        	y:centerY + titleHeight/2
+        });
+        chart = c;
+    });
+		});
+
+
+	</script>
+
+	<script type="text/javascript">
+	var options = {
+      width: '400px',
+      height: '400px',
+      language: 'CH', //语言
+      showLunarCalendar: false, //阴历
+      showHoliday: false, //休假
+      showFestival: false, //节日
+      showLunarFestival: false, //农历节日
+      showSolarTerm: false, //节气
+      showMark: true, //标记
+      
+      mark: {
+        '2017-03-08': 'test'
+      },
+   };
+    var myCalendar = new SimpleCalendar('#container1', options);
+    
+    function setPoint(d)
+    {
+    	$(".day").each(function(){
+    		if($(this).html() == d) {
+    		console.log($(this).html());
+    		$(this).parent().addClass("date-end").css({"position":"relative"}).append("<span class='spot'></span>");
+    		}
+    	});
+    	
+    }
+    setPoint(9);
+  	</script>
+
+  	<script type="text/javascript">
+  		function load(){
+	//上传头像(uploadify插件)
+	$("#user-pic").uploadify({
+		'queueSizeLimit' : 1,
+		'removeTimeout' : 0.5,
+		'preventCaching' : true,
+		'fileObjName':'avatar',
+		'multi'    : false,
+		'formData'     : {
+			'sessionId' : 'fslopor3jkosmm46q1l9jrl932',
+			'_csrf'     : $("meta[name='csrf-token']").attr('content')
+		},
+		'swf' 			: 'images/uploadify.swf',
+		'uploader' 		: '/member-center/upload-img',
+		'buttonText' 	: '<i class="userup-icon"></i>上传头像',
+		'width' 		: '200',
+		'height' 		: '200',
+		'fileTypeExts'	: '*.jpg; *.png; *.gif;',
+		'onUploadError' :function(file, data, msg){
+			console.log(msg);
+		},
+		'onUploadSuccess' : function(file, data, response){
+				//调试语句
+				console.log(data);
+
+				var data = $.parseJSON(data);
+				if(data['status'] == 0){
+					alert(data['msg']);
+					return;
+				}
+				var preview = $('.upload-area').children('#preview-hidden');
+				preview.show().removeClass('hidden');
+				//两个预览窗口赋值
+				$('.crop').children('img').attr('src',data['path']+'?random='+Math.random());
+				//隐藏表单赋值
+				$('#img_src').val(data['path']);
+				//绑定需要裁剪的图片
+				var img = $('<img />');
+				preview.append(img);
+				preview.children('img').attr('src',data['path']+'?random='+Math.random());
+				var crop_img = preview.children('img');
+				crop_img.attr('id',"cropbox").show();
+				var img = new Image();
+				img.src = data['path']+'?random='+Math.random();
+				//根据图片大小在画布里居中
+				img.onload = function(){
+					var img_height = 0;
+					var img_width = 0;
+					var real_height = img.height;
+					var real_width = img.width;
+					if(real_height > real_width && real_height > 200){
+						var persent = real_height / 200;
+						real_height = 200;
+						real_width = real_width / persent;
+					}else if(real_width > real_height && real_width > 200){
+						var persent = real_width / 200;
+						real_width = 200;
+						real_height = real_height / persent;
+					}
+					if(real_height < 200){
+						img_height = (200 - real_height)/2;
+					}
+					if(real_width < 200){
+						img_width = (200 - real_width)/2;
+					}
+					preview.css({width:(200-img_width)+'px',height:(200-img_height)+'px'});
+					preview.css({paddingTop:img_height+'px',paddingLeft:img_width+'px'});
+				}
+				//裁剪插件
+				$('#cropbox').Jcrop({
+		            bgColor:'#333',   //选区背景色
+		            bgFade:true,      //选区背景渐显
+		            fadeTime:1000,    //背景渐显时间
+		            allowSelect:false, //是否可以选区，
+		            allowResize:true, //是否可以调整选区大小
+		            aspectRatio: 1,     //约束比例
+		            minSize : [100,100],//可选最小大小
+		            boxWidth : 200,		//画布宽度
+		            boxHeight : 200,	//画布高度
+		            onChange: showPreview,//改变时重置预览图
+		            onSelect: showPreview,//选择时重置预览图
+		            setSelect:[ 0, 0, 100, 100],//初始化时位置
+		            onSelect: function (c){	//选择时动态赋值，该值是最终传给程序的参数！
+			            $('#x').val(c.x);//需裁剪的左上角X轴坐标
+			            $('#y').val(c.y);//需裁剪的左上角Y轴坐标
+			            $('#w').val(c.w);//需裁剪的宽度
+			            $('#h').val(c.h);//需裁剪的高度
+			        }
+			    });
+				//提交裁剪好的图片
+				$('.save-pic').click(function(){
+					if($('#preview-hidden').html() == ''){
+						alert('请先上传图片！');
+					}else{
+						//由于GD库裁剪gif图片很慢，所以长时间显示弹出框
+
+						$.post($("#pic").attr('action'),$("#pic").serialize(),function(data){
+							if(data.status != 1)
+							{
+								alert(data.msg);
+							}
+							else{
+								location.href=data.url;
+							}
+						},'json')
+
+					}
+				});
+				//重新上传,清空裁剪参数
+				var i = 0;
+				$('.reupload-img').click(function(){
+					$('#preview-hidden').find('*').remove();
+					$('#preview-hidden').hide().addClass('hidden').css({'padding-top':0,'padding-left':0});
+				});
+			}
+		});
+		//预览图
+		function showPreview(coords){
+			var img_width = $('#cropbox').width();
+			var img_height = $('#cropbox').height();
+			  //根据包裹的容器宽高,设置被除数
+			  var rx = 100 / coords.w;
+			  var ry = 100 / coords.h;
+			  $('#crop-preview-100').css({
+			  	width: Math.round(rx * img_width) + 'px',
+			  	height: Math.round(ry * img_height) + 'px',
+			  	marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+			  	marginTop: '-' + Math.round(ry * coords.y) + 'px'
+			  });
+			  rx = 60 / coords.w;
+			  ry = 60 / coords.h;
+			  $('#crop-preview-60').css({
+			  	width: Math.round(rx * img_width) + 'px',
+			  	height: Math.round(ry * img_height) + 'px',
+			  	marginLeft: '-' + Math.round(rx * coords.x) + 'px',
+			  	marginTop: '-' + Math.round(ry * coords.y) + 'px'
+			  });
+			}
+		}
+
+
+
+	</script>
+
+
+  
+</body>
+</html>
+

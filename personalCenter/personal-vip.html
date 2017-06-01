@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>vip会员</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-vip.css">
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/echarts.simple.min.js"></script>
+	  <script type="text/javascript">
+    var  currMonthArray = ["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31"];
+    var  preMonthArray=["1","2","3","4","5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30"];
+    var  currMonthDataArray=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,202,202,202,0,0,0,0,0,0];
+    var  preMonthDataArray=[1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1];
+    </script> 
+
+    <style type="text/css">
+    	.vipcenter-content{
+    		overflow: hidden;
+    	}
+    	.vipcenter-content-box{
+    		width: 970px;height:400px;
+    		margin-left: -20px;
+    		overflow: hidden;
+    	}
+    	.none_data .month_date{
+    		float: left;
+    		margin: 300px 51px 0 0;
+    	}
+
+    	.none_data  .fir_data{
+    		margin-left: 64px;
+    	}
+
+    	.none_data_text{
+    		position: absolute;
+    		width: 250px;
+    		top: 116px;
+    		left: 49%;
+    		margin-left: -127px;
+    		font-size: 18px;
+    		color: #888;
+    		text-align: center;
+    		line-height: 30px;
+    	}
+    	.vipcenter-content-box{
+    		background: #fff;
+    	}
+    </style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie"></a>
+					<a href="#" class="personal-index-head-alink-user"></a>
+					<a href="#" class="personal-index-head-alink-bank"></a>
+				</div>
+			</div>
+			<div class="personal-index-head-title">
+				<p>终于等到你,准备好开启理财之旅了吗？</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+				<span class="personal-index-head-money_total2">5656565.00 </span>	
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 我的投资信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<div style="float: left;width: 200px;height:632px;">
+			<ul class="personal-index-con-left" >
+				<a href="#" class=" personal-left-list1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 "><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4 "><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5 "><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6 chose"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10"><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+			</div>
+			<div class="personal-index-con-right">
+
+				<div class="mem-info">
+					<div class="mem-info-head">
+						<span class="v-leval"><img src="images/v3.png"></span>
+						<div class="v-list">
+							<h5>尊敬会员</h5>
+							<p>上个月日均资产：20481.88元， 本月日均资产：39839.00元</p>
+						</div>
+					</div>
+					
+					<ul class="mem-info-con v5p">
+						<i class="v-5-con">日均净资产再增加<span>10000元</span>，下月可升至v<span>4</span></i>
+					</ul>
+					
+					<ul class="mem-info-foot">
+						<li>
+							<h5>1<span>个</span></h5>
+							自动投标规则
+						</li>
+
+						<li>
+							<h5>18<span>元</span></h5>
+							可领特权优惠
+						</li>
+
+						<li>
+							<h5>8<span>%</span></h5>
+							利息管理费
+						</li>
+
+						<a href="#">查看会员体系</a>
+					</ul>
+				</div>		
+				
+				<div class="mem-title">
+					我的特权
+				</div>
+
+				<ul class="mem-droft">
+					<li class="mem-droli-1">
+						<p>资金变动提醒</p>
+						<mark>
+							当您的账户发生资金变动时，您将收到短信提醒。
+						</mark>
+					</li>
+					<li class="mem-droli-2">
+						<p>提现费用减免</p>
+						<mark>
+							用户每月前十笔提现免费。（每次提现操作均会扣除次数，如果您的提现未到账请联系客服，不要中断、重复进行提现操作。）
+						</mark>
+					</li>
+					<li class="mem-droli-3">
+						<span class="kuailingqu"></span>
+						<p>生日投资礼包</p>
+						<mark>
+							用户生日（以身份证为准）当月可领取沪商财富送出的生日祝福以及生日投资礼包1个，该券有效期为两个月。
+
+							<button class="btn">立即领取</button>
+						</mark>
+					</li>
+					<li class="mem-droli-4">
+						<span class="kuailingqu"></span>
+						<p>每月投资优惠券</p>
+						<mark>
+							符合等级要求的用户每月1号获赠相应额度的投资优惠券一张，有效期15天。（具体使用规则按优惠券说明为准）
+							<button class="btn">立即领取</button>
+						</mark>
+
+					</li>
+					<li class="mem-droli-5">
+						<p>利息管理费减免</p>
+						<mark>
+							自2017年5月1日后，所投标的利息管理费将根据回款当日vip等级递减，2017年5月1日前所投标的回款仍然按10%收取利息管理费。
+						</mark>
+					</li>
+					<li class="mem-droli-6">
+						<p>自动投标设置</p>
+						<mark>
+							帮助您更好的抢到标的，增加您的自动抢标个数。
+						</mark>
+					</li>
+					<li class="mem-droli-7">
+						<p>节日礼品寄送</p>
+						<mark>
+							在特别的节日，您将收到来自沪商财富寄送的节日礼品。
+						</mark>
+					</li>
+					<li class="mem-droli-8">
+						<p>贵宾专属高级服务</p>
+						<mark>
+							沪商财富将定期针对高级会员进行线下活动，如年度体检等，届时您将获得邀请。
+						</mark>
+					</li>
+				</ul>
+
+
+				<div class="mem-table-title">
+					日净资产
+
+					<span style="margin-left:13px; margin-right: 5px;" class="month-tab-active">本月</span><span>上个月</span>
+				</div>
+
+			<!-- 表格内容的-->
+			 <div class="vipcenter-content" id="tabBox">
+				<div id="main-chart1" class="vipcenter-content-box chart-top" ></div>
+                <div id="main-chart" class="vipcenter-content-box dn chart-top" dn style="display: block;"></div>
+
+            </div>
+			<!--  -->
+
+			</div>
+		</div>
+	</div> 
+	<script src="js/echarts2.js"></script>
+	<script type="text/javascript" src="js/myChart.js"></script>
+	<script type="text/javascript">
+		var tab1 = $("#main-chart1");
+		var tab =  $("#main-chart");
+		$(".mem-table-title span").click(function(){
+			$(this).addClass("month-tab-active").siblings().removeClass("month-tab-active");
+			var aa = $(this).index();
+			if(aa==0){
+				tab1.show();
+				tab.hide();
+			}else{
+				tab.show();
+				tab1.hide();
+			}
+		})
+
+
+		window.onscroll = function () { 
+			var t = document.documentElement.scrollTop || document.body.scrollTop;
+			
+			// console.log(t)
+			if(t>154){
+				$(".personal-index-con-left").addClass("guding");
+			}else {
+				$(".personal-index-con-left").removeClass("guding");
+			}
+		}
+
+	</script>
+
+</body>
+</html>

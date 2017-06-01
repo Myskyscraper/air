@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+    <meta charset="utf-8">
+   <script src="http://libs.baidu.com/jquery/2.0.0/jquery.js"></script>
+    <style type="text/css">
+    	.zdBtn {
+    float: right;
+}
+
+.zdBtns {
+    float: left;
+    margin-top: 0;
+}
+
+.zdBtn, .zdBtns {
+    background: #dbdbdb;
+    height: 28px;
+    width: 70px;
+    border-radius: 16px;
+    behavior: url(ie-css3.htc);
+    cursor: pointer;
+    position: relative;
+    color: #fff;
+    font-size: 14px;
+}
+
+#mesBtn {
+    float: left;
+    height: 22px;
+    margin-top: 3px;
+}
+#mesBtn span{
+  height: 22px;
+  line-height: 22px;
+}
+#mesBtn .bntW{
+  height: 20px;
+  top:1px;
+}
+.choseTip {
+    font-size: 14px;
+    color: #9e9e9e;
+}
+
+.seting-form li .zdBtns span {
+    float: left;
+    width: 35px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+}
+
+.zdBtn span {
+    float: left;
+    width: 35px;
+    height: 28px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+	font-size:12px;
+}
+
+.zdBtn .bntW, .zdBtns .bntW {
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    height: 24px;
+    width: 35px;
+    background: #fff;
+    border-radius: 15px;
+    transition: left .3s ease 0s;
+}
+
+
+.zdBntOk {
+    background: #36adf7;
+}
+
+.zdBntOk .bntW {
+    left: 34px;
+    top: 2px;
+}
+
+    </style>
+</head>
+
+<body>
+        
+
+	<div class="zdBtn fr zdBntOk" id="autoBtn">
+		<span>已开</span>
+		<span>已关</span>
+		<div class="bntW"></div>
+	</div>
+
+<script type="text/javascript">
+
+	   // 点击预约自动投标默认开关按钮显示内容
+	var a = true;
+    $('#autoBtn').click(function(){
+    	console.log("ok");
+    	if(a){
+    		$(this).removeClass("zdBntOk");
+    	     a=false;
+    	}else{
+    		$(this).addClass("zdBntOk");
+    	     a=true;
+    	}
+    })
+</script>
+
+</body>
+</html>

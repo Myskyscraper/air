@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>红包奖券</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-myInvestment.css">
+	
+	<link rel="stylesheet" href="css/calendar.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+
+	<style type="text/css">
+		ul, ol, li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie"></a>
+					<a href="#" class="personal-index-head-alink-user"></a>
+					<a href="#" class="personal-index-head-alink-bank"></a>
+				</div>
+			</div>
+			<div class="personal-index-head-title">
+				<p>终于等到你,准备好开启理财之旅了吗？</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">565656.00</span>
+				<span class="personal-index-head-money_total2">5656565.00 </span>	
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 我的投资信息 -->
+	<div class="personal-index-bg" style="height: 804px;">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#"><li>账户首页</li></a>
+				<a href="#"><li >我的投资</li></a>
+				<a href="#" ><li >待收明细</li></a>
+				<a href="#" ><li >资金记录</li></a>
+				<a href="#"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="chose" style="background: #62abf5;"><li style="background: url(images/left-ico1.png) no-repeat 37px -263px; color: #fff;">红包奖券</li></a>
+				<a href="#"><li>VIP会员</li></a>
+				<a href="#"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#"><li>资产统计</li></a>
+				<a href="#"><li>月度账单</li></a>
+				<a href="#"><li>银行账户</li></a>
+				<a href="#"><li>账户设置</li></a>
+			</ul>
+
+
+			<div class="personal-index-con-right" style="height: 775px;">
+				<ul class="personal-myInvest-nav" role="tablist">
+					<li role="presentation" style="width: 222px;" ><a href="">未使用</a></li>
+					<li role="presentation" style="width: 222px;" ><a href="">已使用</a></li>
+					<li role="presentation" style="width: 222px;" ><a href="coupons-undate.html">已过期</a></li>
+					<li role="presentation" style="width: 222px;" class="active"><a href="">会员优惠券</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<ul class="redPackge-choice">
+						<li class="redPackge-choice-active">全部</li>
+						<li >红包</li>
+						<li>奖券</li>
+
+						<div class="personal-switch-box">
+								<span class="personal-switch-tit">自动使用奖券</span>
+								<span class="list-mid-bt">
+									<input type="checkbox" id="checkbox_c1" class="chk_3"><label for="checkbox_c1" id="all"></label>
+								</span>
+								<div class="quent" data-toggle="tooltip-right" title="开启后奖券将用于自动投标"></div>
+						</div>
+					</ul>
+						
+					<ul class="redPackge-con" style="height: 581px;">
+						<li class="r-red vip-quan">
+							<p><span style="font-size: 18px;">￥</span>288</p>
+							<h5>新手注册红包</h5>
+							<h6>2017.03.12~2017.04.15</h6>
+							<h4>
+								单笔投资≥300000<br/>
+								12个月以上的标可以使用
+							</h4>
+							<span class="redPackge-lei">
+								
+							</span>
+
+							<button class="btn lingqu">点击领取</button>
+						</li>
+
+						<li class="r-red vip-quan">
+							<p><span style="font-size: 18px;">￥</span>288</p>
+							<h5>新手注册红包</h5>
+							<h6>2017.03.12~2017.04.15</h6>
+							<h4>
+								单笔投资≥300000<br/>
+								12个月以上的标可以使用
+							</h4>
+							<span class="redPackge-lei">
+								
+							</span>
+							<button class="btn lingqu">点击领取</button>
+						</li>
+
+
+						<li class="r-red vip-quan">
+							<p><span style="font-size: 18px;">￥</span>288</p>
+							<h5>新手注册红包</h5>
+							<h6>2017.03.12~2017.04.15</h6>
+							<h4>
+								单笔投资≥300000<br/>
+								12个月以上的标可以使用
+							</h4>
+							<span class="redPackge-lei">
+								
+							</span>
+							<button class="btn lingqu">点击领取</button>
+						</li>
+						
+					</ul>
+					
+					
+
+
+				</div>
+			</div>
+
+
+		</div>
+	</div> 
+	<script type="text/javascript">
+		$(".redPackge-choice  li").click(function(){
+			$(this).addClass("redPackge-choice-active").siblings().removeClass("redPackge-choice-active");
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,476 @@
+.personal-index-bg{
+	width: 100%;
+	background:#f5f5f5; 
+	min-height:720px; //（解决ie8.9.ff.chrome）
+	*+height:100%;  //（解决ie7）
+	_height:720px; //（解决ie6） ie6超出自动溢出
+	
+}
+
+/*----------------------personal-home-right--------------------------*/
+
+
+.personal-index-con-right{
+	width: 970px;
+	height: 720px;
+	margin-left: 30px; 
+	background: #fff;
+}
+
+.personal-index-con-right-contract{
+	height: 40px;
+	background:url(../images/qianyue.png) no-repeat center; 
+	color: #ffffff;
+	padding-left: 60px; 
+	line-height: 35.5px;
+	/*display: none;*/
+	font-size: 15px;
+}
+.personal-index-con-right-contract a{
+	text-decoration: none;
+}
+
+.bt-qianyue{
+	/*display: inline-block; */
+    background: #ff9c1a;
+    border-radius: 5px;    
+    padding: 0 16px;
+}
+
+.personal-index-con-right-oldweb{
+	height: 40px;
+	background: #bac4e0;
+ 	margin: 10px 0;
+}
+
+.personal-index-con-right-oldweb span{
+	width: 21px;
+	height: 40px;
+}
+
+.personal-index-con-right-oldweb p{
+	float: left;
+	
+	height: 40px;
+    color: #ffffff;
+    padding-left: 21px;
+    line-height: 36.5px;
+    font-size: 15px;
+}
+
+.personal-index-con-right-oldweb a{
+	display: block;
+	float: right;
+	width: 90px;
+	height: 20px;
+	text-align: center;
+	line-height: 20px;
+	font-size: 14px;
+	color:  #bac4e0;
+	background: #ffffff;
+	border-radius: 11px;
+	text-decoration: none;
+}
+
+.goOld{
+	float: right;
+    height: 40px;
+  
+    padding: 9px 37px 0 0;
+}
+
+
+.personal-hide{
+	display: none;
+}
+
+.personal-index-con-right-con{
+	width: 970px;
+	height: 630px;
+	/*background: red;*/
+}
+
+/*------------------------------增加的home修搬过来的改的--------------------*/
+
+/*----------------------------列表的-----------------*/
+.index-centr-cir{
+	width: 570px;
+	height: 630px;
+	float: left;
+	border-top:1px solid #e6e6e6 ;
+}
+
+.cir-t{
+	width: 527px;
+	display: block;
+	height: 46px;
+	line-height: 54px;
+	font-family: "微软雅黑";
+	padding-left: 33px;
+	font-size: 16px;
+}
+
+.shuaxin{
+	float: right;
+	cursor: pointer;
+	padding-top: 1px;
+}
+.cir-m{
+	display: block;
+	height: 32px;
+	line-height: 32px;
+	padding-left: 64px;
+	font-size: 12px;
+}
+.cir-m span{
+	font-size: 23px; 
+	font-weight: 500;
+}
+
+
+
+/*----------------------------日历的-----------------*/
+.index-centr-calendar{
+	width: 400px;
+	height: 630px;
+	/*background: blue;*/
+	float: left;
+	position: relative;
+}
+
+html {
+	font: 500 14px 'roboto';
+	color: #333;
+	background-color: #fafafa;
+}
+a {
+	text-decoration: none;
+}
+ul, ol, li {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+#demo {
+	width: 300px;
+	margin: 150px auto;
+}
+p {
+	margin: 0;
+}
+#dt {
+	margin: 30px auto;
+	height: 28px;
+	width: 200px;
+	padding: 0 6px;
+	border: 1px solid #ccc;
+	outline: none;
+}
+#ca .day li{
+	border: 1px solid #ccc;
+	
+}
+/*----------------------日历下的详情显示---------------------------*/
+.ca-mess{
+	width: 400px;
+	height: 149px;
+	border-top:1px solid #e6e6e6;
+	position: absolute;
+	top: 404px;
+	left: 0;
+}
+.ca-mess ul{
+	border-left: 1px solid #E6E4E0;
+}
+
+
+.cal-list1{
+	width: 400px;
+    height: 30px;
+    padding-top: 20px;
+    padding-left: 204px;
+}
+
+.cal-list1 li{
+	float: left;
+	margin-left: 31px;
+	font-size: 12px;
+}
+
+.cal-list1 li span{
+	float: left;
+	width: 12px;
+	height: 12px;
+	border-radius:5px ;
+}
+.tt1 span{
+	background: #ff9818;
+}
+
+.tt2 span{
+	background: #50c881;
+}
+
+.index-cent-cirs{
+	width: 570px;
+    height: 138px;
+    padding-left: 30px;
+    margin-top:10px; 
+}
+
+.index-cent-cirs li{
+	float: left;
+	width: 191px;
+}
+
+.index-cent-cirs-1{
+	
+	height: 47px;
+	
+}
+
+.index-cent-cirs-1 div:nth-child(1){
+	font-size: 12px;
+    padding-top: 7px;
+    padding-left: 12px;
+  
+    color: #7d87aa;
+}
+
+.index-cent-cirs-1 div:nth-child(2){
+	font-size: 16px;
+    padding-top: 7px;
+    padding-left: 25px;
+    color: #23354d;
+    font-weight: 600;
+}
+
+.index-cent-cirs-2 div:nth-child(1){
+	font-size: 12px;
+    padding-top: 7px;
+    padding-left: 12px;
+    
+    color: #7d87aa;
+}
+
+.index-cent-cirs-2 div:nth-child(2){
+	font-size: 16px;
+    padding-top: 7px;
+    padding-left: 25px;
+    color: #23354d;
+    font-weight: 600;
+}
+
+.index-cent-cirs-2{
+	width: 162px;
+	height: 80px;
+	padding-top: 10px;
+	
+}
+
+.index-cent-cirs span{
+	float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 5px;
+}
+
+.look-more{
+    width: 87px;
+    height: 12px;
+    font-size: 12px;
+    color: #b4b4b4;
+    line-height: 12px;
+    /*position: absolute;
+    right: 0;
+    top: 0;*/
+}
+.backSystemLogo{
+	width: 570px;
+    height: 87px;
+    padding-left: 115px;
+	
+}
+/*-------------------------日历地下修改的样式--------------------------*/
+.cal-list2{
+	width: 400px;
+	height: 50px;
+	position: relative;
+}
+
+.cal-list2 li{
+	float: left;
+}
+
+.cal-list2 li:nth-child(1){
+	width:108px;
+	height: 100px;
+	position: absolute;
+	left: 0;
+	top: -34px;
+}
+.cal-list2-t{
+	width: 108px;
+	height: 42px;
+	position: relative;
+	
+}
+.cal-list2-t span{
+	position: absolute;
+    left: 33px;
+    line-height: 20px;
+    bottom: 0;
+    width: 63px;
+    height: 20px;
+    background: #7f8bb3;
+    font-size: 12px;
+    color: #fffffa;
+    text-align: center;
+}
+
+.cal-list2-s{
+    padding-left: 33px;
+    font-size: 14px;
+    color: #7f8bb3;
+    font-weight: 600;
+   
+}
+.cal-list2-s span{
+	display: block;
+    width: 63px;
+    height: 43px;
+    background:#f4f6fa;
+    text-align: center;
+    line-height: 43px;
+}
+
+/*.cal-liss .cal-list2-tt{
+	width:150px ;
+	height: 42px;
+	text-align: right;
+	line-height: 42px;
+	font-size: 12px;
+	
+	color: #a9acb5;
+}
+
+.cal-liss .cal-list-ss{
+	width: 150px;
+	height: 42px;
+	text-align: right;
+	line-height: 17px;
+	font-size: 18px;
+}*/
+
+
+.cal-list3{
+	width: 400px;
+	height: 138px;
+	padding: 0 30px;
+}
+
+.cal-list3 li{
+	height: 43px;
+	line-height: 43px;
+	font-size: 15px;
+	color: #a0aac7;
+	border-bottom: 1px solid #eaedf6;
+}
+
+.cal-list-ss{
+	display: block;
+	float: right;
+	width: 124px;
+	height: 43px;
+	text-align: center;
+	color: #62aaf4;
+}
+
+
+/*---------------------------------------------------*/
+
+/*最新的日历修改样式*/
+.sc-today {
+    text-align: center;
+    background: none;
+    border: 1px solid #e7e8fd;
+    text-align: center;
+    color: white;
+}
+.sc-today .day {
+    line-height: 40px;
+    text-align: center;
+    width: 40px;
+    border: 1px solid #63abf5;
+    border-radius: 50%;
+    height: 40px;
+    margin: -8px auto;
+   	background: #63abf5;
+}
+
+.sc-item .day {
+    font-size: 16px;
+    font-weight: 500;
+    color: #8794b4;
+}
+
+.sc-active-day .day, .sc-selected .day {
+  
+    border: 1px solid #63abf5;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+    margin: -8px auto 0;
+    line-height: 40px;
+    text-align: center;
+}
+.sc-active-day, .sc-selected{
+   	border: 1px solid #F1EBE4;
+   	border-top:none ;
+}
+
+.sc-item:nth-child(7n) .day, .sc-item:nth-child(7n+6) .day {
+   color:#8794b4;
+}
+
+ .sc-item:nth-child(7n+1) {
+ 
+  border-left:none ;
+}
+
+sc-week-item:nth-child(7n+1) {
+    border-left:none ;
+}
+.sc-week-item {
+    background-color: #f5f6fa;
+  	border: 1px solid #e4e4e6;
+  	color:#7c88b2!important ;
+  	font-size: 16px;
+  	border-right:none ;
+}
+
+.sc-week-item:nth-child(7n), .sc-week-item:nth-child(7n+6) {
+    color:#7c88b2!important;
+}
+
+.spot{
+	display: block;
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    left: 25px;
+    top: 45px;
+    background: #50c881;
+    border-radius: 36%;
+   
+}
+
+
+
+/*增加状态转移样式*/
+
+.personal-status-p{
+	width: 356px;
+    margin-left: 86px;
+    text-align: center;
+}

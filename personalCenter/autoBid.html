@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>自动投标</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	
+
+	<link rel="stylesheet" type="text/css" href="css/personalCenter-left+head.css">
+	<link rel="stylesheet" type="text/css" href="css/personCenter-myInvestment.css">
+	
+	
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap-switch.min.js"></script>
+	<script type="text/javascript" src="js/vue.min.js"></script>
+
+	<style type="text/css">
+		ul, ol, li {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+		}
+	</style>
+</head>
+<body>
+	<!-- ***********************************新中心的模板********************************* -->
+
+	<!-- 个人头部信息 -->
+	<div class="personal-index-head-bg">
+		<div class="personal-index-head">
+			<div class="personal-index-head-img">
+				<img src="images/touxiang.jpg"/>
+				<span class="account-vip-dj vip2"></span>
+			</div>
+			<div class="personal-index-head-username">
+				<p>您好,<span>hs****98</span></p>
+				<div class="personal-index-head-alink"> 
+					<a href="#" class="personal-index-head-alink-mobie unable1" data-toggle="tooltip-right" title="手机认证"></a>
+					<a href="#" class="personal-index-head-alink-user unable2" data-toggle="tooltip-right" title="银行存管"></a>
+					<a href="#" class="personal-index-head-alink-bank" data-toggle="tooltip-right" title="银行卡绑定"></a>
+				</div>
+			</div>
+			<div class="personal-index-head-title">
+				<p>终于等到你,准备好开启理财之旅了吗？</p>
+				<ul>
+					<a href=""><li class="personal_head_active">充值</li></a>
+					<a href=""><li style="margin-left: 30px; color: #2e3e58">提现</li></a>
+				</ul>
+			</div>
+
+			<div class="personal-index-head-moneyShow">
+				<div class="personal-index-head-money_total">9999.30</div>
+				<span class="personal-index-head-money_total1">0.00</span>
+				<span class="personal-index-head-money_total2">900.00 <img src="images/quent.png" data-toggle="tooltip-right" title="累计收益说明：已获收益的总计"/></span>
+
+				<!-- <span class="quent headquest" data-toggle="tooltip-right" title="开启后奖券将用于自动投标"></span> -->
+					
+			</div>
+		</div>
+	</div>
+
+
+	<!-- 我的投资信息 -->
+	<div class="personal-index-bg">
+		<div class="personal-index-con">
+			<!-- 首页左侧代码 -->
+			<ul class="personal-index-con-left">
+				<a href="#" class=" personal-left-list1"><li>账户首页</li></a>
+				<a href="#" class="personal-left-list2 "><li>我的投资</li></a>
+				<a href="#" class="personal-left-list3"><li>待收明细</li></a>
+				<a href="#" class="personal-left-list4 chose"><li>资金记录</li></a>
+				<a href="#" class="personal-left-list5"><li>自动投标</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list6"><li>红包奖券</li></a>
+				<a href="#" class="personal-left-list7"><li>VIP会员</li></a>
+				<a href="#" class="personal-left-list8"><li>邀请好友</li></a>
+				<span class="fenxi"></span>
+				<a href="#" class="personal-left-list9"><li>资产统计</li></a>
+				<a href="#" class="personal-left-list10"><li>月度账单</li></a>
+				<a href="#" class="personal-left-list11"><li>银行账户</li></a>
+				<a href="#" class="personal-left-list12"><li>账户设置</li></a>
+			</ul>
+
+
+			<div class="personal-index-con-right">
+
+				<div class="personal-autobid-head">
+					<p>当前最多可以开启<span >3</span>条规则</p>
+
+					<div class="personal-switch-box autoSwitch">
+						<span class="personal-switch-tit">自动使用奖券</span>
+
+						<!-- <span class="list-mid-bt">
+							<input type="checkbox" id="checkbox_c1" class="chk_3"><label for="checkbox_c1" id="all"></label>
+						</span> -->
+						
+						<div class="zdBtn fr zdBntOk" id="autoBtn">
+							<span>已开</span>
+							<span>已关</span>
+							<div class="bntW"></div>
+						</div>
+
+
+						<div class="quent" data-toggle="tooltip-right" title="开启后奖券将用于自动投标"></div>
+					</div>
+
+				</div>
+				
+				<div class="personal-autobid-addrulerbtn" data-toggle="modal" data-target=".bs-example-modal-lg">
+					+新增规则
+				</div>
+				
+				<div class="personal-autobid-con">
+					<!-- 规则1 -->
+					<div class="personal-autobid-ruler1">
+						<div class="personal-autobid-cir">
+							<p>2235次</p>
+							<h6>已成功投标</h6>
+						</div>
+
+						<div class="personal-autobid-detail">
+
+							<ul class="personal-autobid-list1">
+								<li>￥54700.00-￥75000.00</li>
+								<span>投标额度范围</span>
+
+								<div class="personal-switch-box ">
+									<div class="zdBtn fr zdBntOk btnplace" id="autoBtn">
+										<span>已开</span>
+										<span>已关</span>
+										<div class="bntW"></div>
+									</div>	
+								</div>
+							</ul>
+
+							<ul class="personal-autobid-list2">
+								<li>当前排名：<span>239904</span></li>
+								<li>是否天标：<span>是</span></li>
+								<li>有效排名：<span>203</span></li>
+								<li>借款期限：<span>30天</span></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 规则2 -->
+					<div class="personal-autobid-ruler1">
+						<div class="personal-autobid-cir">
+							<p>2235次</p>
+							<h6>已成功投标</h6>
+						</div>
+
+						<div class="personal-autobid-detail">
+
+							<ul class="personal-autobid-list1">
+								<li>￥54700.00-￥75000.00</li>
+								<span>投标额度范围</span>
+								<div class="personal-switch-box ">
+									<div class="zdBtn fr zdBntOk btnplace" id="autoBtn2">
+										<span>已开</span>
+										<span>已关</span>
+										<div class="bntW"></div>
+									</div>
+								</div>
+							</ul>
+
+							<ul class="personal-autobid-list2">
+								<li>当前排名：<span>239904</span></li>
+								<li>是否天标：<span>是</span></li>
+								<li>有效排名：<span>203</span></li>
+								<li>借款期限：<span>30天</span></li>
+							</ul>
+						</div>
+					</div>
+
+					<ul class="index-withruler">
+						<h4>温馨提示：</h4>
+						<li>(1) 债权持有不满3个月的转让管理费为转让价格的1%;</li>
+						<li>(2) 持有超过3个月（包括3个月）以上转让管理费为转让价格的0.5%;</li>
+						<li>(3) 手续费不足1元的按1元计;</li>
+						<li>(4) 手续费不提前收取，等债权转让时收取;</li>
+						<li>(5) 每笔根据购买债权人的付款扣除手续费后打到债权转让人账户。</li>
+						<li>(6) 审核时间为工作时间(09:00-18:00)，如有特殊情况，请拨打客服电话:400-821-7008 。</li>
+					</ul>	
+
+
+				</div>
+				
+			</div>
+
+
+		</div>
+	</div>
+	
+	
+
+
+<!-- 弹出框的 -->
+	<div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					<h4 class="modal-title">添加自动投标</h4>
+				</div>
+
+				<div class="modal-body">
+
+					<form class="form-horizontal">
+
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">最低投入额度</label>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" id="inputEmail3" placeholder="￥">
+							</div>
+						</div>
+					
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label">最高投入额度</label>
+							<div class="col-sm-7">
+								<input type="text" class="form-control" id="inputEmail3" placeholder="￥">
+							</div>
+
+						</div>
+
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label" style="color: #7e8bb2;">月标借款期限</label>
+							<div class="col-sm-3 addwid">
+								<input type="text" class="form-control" id="inputEmail3" />
+							</div>
+							
+							 <span style="float: left;padding-top: 5px;">~</span>
+
+							<div class="col-sm-3 addwid">
+								<input type="text" class="form-control" id="inputEmail3" />
+							</div>
+						</div>
+
+
+						<div class="form-group">
+							<label for="inputEmail3" class="col-sm-3 control-label" style="color: #7e8bb2;">是否设置天标</label>
+
+							<div class="col-sm-9">
+								<label class="radio-inline">
+									<input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"> 是
+								</label>
+								<label class="radio-inline">
+									<input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"> 否<span class="zhushibiaoij">(天标默认为1目标，如不投天标请设置为“否”)</span>
+								</label>
+							</div>
+						</div>
+
+						<button type="button" class="btn btn-primary save-btn" aria-label="Close">保存设置</button>
+
+					</form>
+					
+				</div>
+
+			</div>
+		</div>
+	</div>
+<script type="text/javascript">
+
+	   // 点击预约自动投标默认开关按钮显示内容
+	var a = true;
+    $('#autoBtn').click(function(){
+    	console.log("ok");
+    	if(a){
+    		$(this).removeClass("zdBntOk");
+    	     a=false;
+    	}else{
+    		$(this).addClass("zdBntOk");
+    	     a=true;
+    	}
+    })
+</script>
+	
+</body>
+</html>
