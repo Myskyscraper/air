@@ -1,0 +1,396 @@
+body,ul,li,p,h1,h2,h3,h4,h5,h6,img,br,hr,table,tr,td,dl,dt,dd,form {
+	margin: 0;
+	padding: 0;
+}
+body {
+	font-family: "Microsoft YaHei";
+	font-size: 12px;
+	color: #434343;
+	/*background: #8cd45a;*/
+}
+.clear {
+	clear: both;
+	font-size: 0px;
+}
+ul,li {
+	list-style: none;
+}
+img {
+	border: none;
+}
+/*一般链接*/
+a {
+	text-decoration: none;
+	color: #555;
+}
+a: hover {
+	color: #3366ff;
+}
+/*--------------------------------公共样式----------------------------------------*/
+.laber-tit,.laber-getmedol-bg,.laber-collectmedol-bg,.laber-anothermedol-bg{
+	width: 1024px;
+	margin: 0 auto;
+}
+
+
+/*--------------------------------banner----------------------------------------*/
+
+.labor-bg{
+	background: #8cd45a;
+}
+
+.labor-banner-bg{
+	height: 236px;
+    background: url(../images/labor-banner-bg.png) no-repeat center;
+    padding-top: 620px;
+}
+
+.labor-banner-con{
+	margin: 0 auto;
+	width: 420px;
+	height: 50px;
+	
+	color: #45991f;
+	text-align: center;
+}
+.labor-banner-con dd{
+	font-size: 18px;
+}
+
+.labor-banner-con dt{
+	font-size: 14px;
+	margin-top: 8px;
+}
+
+
+/*--------------------------------getmedol----------------------------------------*/
+.laber-tit{
+	height: 123px;
+	text-align: center;
+
+}
+
+.laber-tit dd{
+	font-size: 40px;
+	color: #fff;
+}
+.laber-tit dt{
+	color: #20800d;
+	font-size: 16px;
+	margin-top: 20px;
+
+}
+
+.laber-tit span{
+	color: #fbe25b;
+}
+
+.laber-getmedol-bg{
+	height: 680px;
+	background: url(../images/getmedol-bg.png) no-repeat  bottom center;
+}
+
+.laber-getmedol-con{
+	height: 470px;
+	
+}
+
+
+.zcyl-cj-bg{
+	width: 615px;
+	height: 470px;
+	background: url(../images/laborlottey.png) no-repeat center;
+	float: left;
+}
+
+#lottery{display:block;width:100%;height:470px;}
+#lottery table td{text-align:center;vertical-align:middle;width:200px;height:150px;float:left;margin-left: 4px;margin-bottom: 8px;}
+#lottery table td a{display:block;text-decoration:none;display:block;width:200px;height:150px;text-align:center;vertical-align:middle}
+#lottery table td.active{display:block;background:url("../images/zcyl-cj-hover.png") no-repeat 0 0;color:#fff}
+
+/*弹窗样式的*/
+.play-layer{filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#B8565656, endColorstr=#B8565656);background-color:rgba(86,86,86,.70);font-size:0;_line-height:0;text-align:center;overflow:hidden;
+    display:none;width:100%;height:100%;position:fixed;_position:absolute;z-index:10000;top:0;left:0;}
+.app-cj-popup{height:257px;width:447px;background:url("../images/zcyl-cj-popup.png") no-repeat 0 0;background-size:contain;position:relative;left:50%;top:50%;margin:-153px 0 0 -190px}
+.app-cj-del{width:33px;height:33px;position:absolute;right:0;top:0;}
+.app-cj-yuan{color:#666;font-size:16px;position:absolute;left:0;top:104px;width:100%;text-align:center}
+.app-cj-yuan dfn{font-size:24px;font-weight:bold;vertical-align:-2px;margin:0 2px 0 0;color:#ff9600}
+.app-cj-text{width:100%;height:35px;display:block;overflow:hidden;line-height:35px;text-align:center;color:#666;font-size:16px;position:absolute;left:0;top:148px;}
+
+
+.play-alert{
+	height: 257px;
+    width: 447px;
+    background: url(../images/zcyl-cj-popup.png) no-repeat 0 0;
+    background-size: contain;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    margin: -153px 0 0 -190px;
+    z-index: 5;
+    z-index: 5;
+    padding-top: 90px;
+	color: #B3EE3A;
+	display: none;
+
+}
+
+.play-alert h4{
+	text-align: center;
+	font-size: 36px;
+}
+
+   
+.play-alert h5{
+	text-align: center;
+    font-size: 15px;
+    margin-top: 38px;
+}
+
+
+
+
+.spn{
+	width: 20px;
+	height: 20px;
+	display: block;
+	background: url(../images/error.png) no-repeat center;
+	background-size: 100%;
+	position: absolute;
+	right: 0;
+	top: 0;
+	
+
+}
+
+
+/*getmedol-list*/
+
+.laber-getmedol-person{
+	width: 346px;
+	height: 470px;
+	float: left;
+	margin-left: 48px;
+	background: url(../images/labor-person.png) no-repeat center;
+	font-size: 30px;
+	color: #2d7e7f;
+	position: relative;
+}
+.laber-getmedol-person h4{
+	width: 224px;
+	height: 67px;
+	position: absolute;
+	left: 70px;
+	top: 86px;
+}
+
+.laber-getmedol-person h5{
+	width: 224px;
+	height: 67px;
+	position: absolute;
+	left: 70px;
+	top: 186px;
+}
+
+.laber-getmedol-person a {
+	width: 222px;
+    height: 46px;
+    position: absolute;
+    left: 62px;
+    top: 307px;
+}
+
+.laber-getmedol-person span{
+	font-size: 18px;
+}
+
+
+/*--------------------------------collectmedol----------------------------------------*/
+.laber-collectmedol-bg{
+	height: 767px;
+	background: url(../images/collectmedol-bg.png) no-repeat  bottom center;
+}
+
+.laber-collectmedol-con{
+	height: 583px;
+	
+}
+
+
+.laber-collectmedol-con-show{
+	height: 47px;
+	background: url(../images/prizentlist.png) no-repeat  bottom center;
+	padding-top: 148px;
+}
+.laber-collectmedol-con-show li{
+	float: left;
+	width: 196px;
+	text-align: center;
+	font-size: 16px;
+	color: #2e7e7d;
+}
+
+.laber-collectmedol-con-show li:not(:first-child){
+	margin-left: 10px;
+}
+
+.laber-collectmedol-con-show-list{
+	height: 347px;
+	background: url(../images/iphone.png) no-repeat  bottom center;
+	margin-top: 42px;
+}
+
+.laber-collectmedol-con-show-list li{
+	float: left;
+	width: 512px;
+	height: 350px;
+	position: relative;
+	
+}
+
+.laber-collectmedol-con-show-list li a{
+	display: block;
+    position: absolute;
+    left: 88px;
+    top: 263px;
+    width: 330px;
+    height: 60px;
+}
+
+
+/*--------------------------------anothermedol----------------------------------------*/
+
+.laber-anothermedol-bg{
+	height: 695px;
+	position: relative;
+}
+
+.anothermedol-list{
+	height: 344px;
+	background: orange;
+}
+
+.anothermedol-ruler {
+    margin-top: 89px;
+    height: 182px;
+    background: url(../images/anothermodel-ruler.png) no-repeat center;
+    font-size: 14px;
+    color: #fff;
+    padding-left: 137px;
+    padding-top: 40px;
+    line-height: 22px;
+    position: relative;
+
+}
+
+
+.anothermedol-ruler span{
+	 position: absolute;
+	 left: 0px;
+	 top: 0px;
+}
+
+.anothermedol-bottom{
+	height: 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff;
+    padding-left: 45px;
+    padding-right: 24px;
+}
+.anothermedol-bottom span{
+	display: block;
+	float: right;
+	color: #4fa611;
+}
+
+.anothermedol-list-show{
+	height: 343px;
+	background: url(../images/anotherList.png) no-repeat center;
+	position: relative;
+}
+
+
+.anothermedol-list-show li{
+	width: 342px;
+	height: 294px;
+	padding-top:48px; 
+
+}
+
+.anothermedol-list-show li p{
+	font-size: 18px;
+    color: #fff;
+    padding-left: 53px;
+
+}
+
+.anothermedol-list-show li h3{
+	height: 86px;
+    text-align: center;
+    font-size: 64px;
+    line-height: 75px;
+    margin-top: 20px;
+    color: #fcf985;
+    font-family: "arial";
+}
+
+.anothermedol-list-show li h4{
+	margin-top:12px; 
+	height: 42px;
+	padding-left: 58px;
+	line-height: 19px;
+	color: #fcf985;
+}
+
+.anothermedol-list-show li h5{
+	margin-top: 15px;
+    padding-left: 58px;
+    line-height: 20px;
+    color: #fff;
+}
+
+.anothermedol-list-btns{
+	display: block;
+    width: 245px;
+    height: 57px;
+   
+    position: absolute;
+    left: 390px;
+    top: 251px;
+}
+
+.anothermedol-list-btns2{
+	display: block;
+    width: 245px;
+    height: 57px;
+    
+    position: absolute;
+    left: 737px;
+    top: 251px;
+}
+
+/*-------------------------------------------媒体查询的样式的--------------------*/
+@media screen and (min-width: 400px) and (max-width: 600px)  {
+	
+	body{
+		width: 1200px;
+	}
+	.nplayerIntrod-banner-bg,.nplayerIntrod-banner-bg,.nplayerIntrod-abstract-bg,.nplayerIntrod-advantage-bg {width: 1200px;}
+	.nplayerIntrod-advantage-bg{width:1200px;}
+	
+}
+@media screen and (min-width: 600px) and (max-width: 750px)  {
+	
+	body{
+		width: 1200px;
+	}
+	
+}
+
+@media screen and (min-width: 750px) and (max-width: 1200px)  {
+	body{
+		width: 1200px;
+	}
+	
+}

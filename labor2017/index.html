@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>51劳动节活动</title>
+	<link rel="stylesheet" href="css/nplayIntro.css" />
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/lottery.js"></script>
+	
+</head>
+<body>
+
+	<section class="labor-bg">
+	<!---- 弹窗 ---->
+    <div class="play-layer" id="play-layer1">
+        <div class="app-cj-popup">
+            <a class="app-cj-del" href="javascript:;"></a>
+            <span class="app-cj-yuan">恭喜你获得<dfn>“最快乐”</dfn>奖章</span>
+            <span class="app-cj-text">幸运~加油满满！</span>
+        </div>
+    </div>
+
+
+    <div class="play-alert">
+    	 <a class="app-cj-del" href="javascript:;"></a>
+    	<h4>兑换<span class="alert-con">50元红包</span>成功</h4>
+		
+		<h5>稍后客服人员会与你联系，请耐心等待</h5>
+
+    </div>
+
+     
+	<!-- banner-->
+		<div class="labor-banner-bg">
+			<dl class="labor-banner-con">
+				<dd>活动时间：2017年04月26日 - 05月8日</dd>
+				<dt>亲爱的用户<span>【请登录】</span></dt>
+			</dl>
+
+
+		</div>
+	<!-- getmedol-->
+
+		<dl class="laber-tit">
+			<dd>集劳动奖章，做最光荣的人</dd>
+			<dt>活动期间，只要累计投资满2w元，就可以获得一次抽奖机会，抽奖会获得一枚活动奖章。</dt>
+		</dl>
+
+		<div class="laber-getmedol-bg">
+			<div class="laber-getmedol-con">
+				<!-- 九宫格图 -->
+				<div class="zcyl-cj-bg">
+					<div id="lottery">
+						<table border="0" cellpadding="0" cellspacing="0">
+							<tr class="lottery-group">
+								<td class="lottery-unit td_1"></td>
+								<td class="lottery-unit td_2"></td>
+								<td class="lottery-unit td_3"></td>
+							</tr>
+							<tr class="lottery-group">
+								<td class="lottery-unit td_4"></td>
+								<td class="td_5">
+									<a href="javascript:;" id="choujiang"></a>
+								</td>
+								<td class="lottery-unit td_6"></td>
+							</tr>
+							<tr class="lottery-group">
+								<td class="lottery-unit td_7"></td>
+								<td class="lottery-unit td_8"></td>
+								<td class="lottery-unit td_9"></td>
+							</tr>
+						</table>
+					</div>
+				</div>
+				<!-- 右侧列表信息 -->
+				<div class="laber-getmedol-person">
+					<h4>30600000.00<span>元</span></h4>
+					<h5>30<span>次</span></h5>
+					<a href=""></a>
+				</div>
+
+
+			</div>
+		</div>
+
+	<!-- collecmedol-->
+		<dl class="laber-tit">
+			<dd>奖章换大礼，做幸运劳动人</dd>
+			<dt>活动期间，只要集齐5枚奖章，可获得<span>iPhone7plus</span>大奖，集齐前4枚奖章，可获得<span>128G iPad Air</span>大奖，每位用户只能兑换一次。</dt>
+		</dl>
+
+		<div class="laber-collectmedol-bg">
+			<div class="laber-collectmedol-con">
+				<ul class="laber-collectmedol-con-show">
+					<li>拥有个数：21</li>
+					<li>拥有个数：21</li>
+					<li>拥有个数：21</li>
+					<li>拥有个数：21</li>
+					<li>拥有个数：21</li>
+				</ul>
+
+				<ul class="laber-collectmedol-con-show-list">
+					<li>
+						<a  id="labor1"></a>
+					</li>
+					<li>
+						<a  id="labor2"></a>
+					</li>
+				</ul>
+			</div>
+
+		</div>
+
+
+	<!-- anothermedol-->
+		<dl class="laber-tit">
+			<dd>奖章不浪费，犒劳勤奋的人</dd>
+			<dt>活动结束后，您尚未使用的奖章可以用来兑换其他奖励。兑换机会只有1次。</dt>
+		</dl>
+
+		<div class="laber-anothermedol-bg">
+
+			<span class="laber-anothermedol-btn laber-anothermedol-btn1"></span>
+			<span class="laber-anothermedol-btn laber-anothermedol-btn2"></span>
+			<ul class="anothermedol-list-show">
+				<li>
+					<p>您当前未使用的奖章总数为：</p>
+					<h3>123</h3>
+					<h4>没能兑换到大奖不用可惜<br/>剩余的奖章还能用来兑换现金红包哦</h4>
+					<h5>1~10枚可兑换20元红包<br/>11枚以上可兑换50元红包</h5>
+				</li>
+
+				<span id="labor3" class="anothermedol-list-btns"></span>
+				<span id="labor4" class="anothermedol-list-btns2"></span>
+			</ul>
+
+			<ul class="anothermedol-ruler">
+
+				<li>1. 用户在活动期间，单笔投资每满2w元可以获得一次抽奖的机会。</li>
+				<li>2. 奖章用于兑换奖励实物大奖或红包券，每一位用户只能兑换相应的实物奖励。如您集齐5枚奖章，只能兑换iPhone 7 plus</li>
+				<li>3. 活动所获得的实物奖励将在活动结束7个工作日内发放。请中奖的投资者保持通讯畅通。</li>
+				<li>4. 活动结束后，所获得的奖章如没有使用，可以兑换20元和50元现金券。兑换机会只有1次。如您有20枚奖章，兑换完50元红包券后，不能再兑换20元的红包券。</li>
+				<li>5. 如您已经中奖，但是不想要实物，可以返现哦，返现的金额=物品采购价*80%</li>
+				<li>6. 红包兑换时间为5月9日-5月12日，请抓紧兑换。</li>
+				<li>7. 活动最终解释权归沪商财富所有，若有疑问，可以直接联系在线客服或者拨打400-821-7008。</li>
+
+
+			</ul>
+			<p class="anothermedol-bottom">活动和奖品均由睿本金融提供，与设备生产商苹果公司(Apple.Inc)无关<span>广告 市场有风险  投资需谨慎</span></p>
+		</div>
+	
+	
+
+
+
+
+
+
+
+
+
+	</section>
+</body>
+<script type="text/javascript">
+    window.onload = function () {
+        lottery.lottery({
+            selector:     '#lottery',
+            width:        3,
+            height:       3,
+            index:        0,    // 初始位置
+            initSpeed:    200,  // 初始转动速度
+            // upStep:       50,   // 加速滚动步长
+            // upMax:        50,   // 速度上限
+            // downStep:     30,   // 减速滚动步长
+            // downMax:      500,  // 减速上限
+            // waiting:      5000, // 匀速转动时长
+            beforeRoll: function () { // 重写滚动前事件：beforeRoll
+                this.options.target = 6;
+            },
+            stop: function (){
+            	
+                $("#play-layer1").show();
+            }
+        });
+        $(".app-cj-del").click(function(){
+            $(this).parents("#play-layer1").hide();
+        })
+
+        $("#choujiang").click(function(){
+        	console.log("a111");
+        })
+
+        // 兑换样式的
+        $("#labor1").click(function(){
+        	$(".play-alert").hide();
+        	$(".alert-con").text("iPhone7plus");
+        	$(".play-alert").show();
+        	console.log("aa");
+        });
+
+        $(".app-cj-del").click(function(){
+        	$(this).parents(".play-alert").hide();
+        })
+
+
+        $("#labor2").click(function(){
+        	$(".play-alert").hide();
+        	$(".alert-con").text("iPad Air");
+        	$(".play-alert").show();
+        })
+
+        $("#labor3").click(function(){
+        	$(".play-alert").hide();
+        	$(".alert-con").text("20元");
+        	$(".play-alert").show();
+        })
+
+        $("#labor4").click(function(){
+        	$(".play-alert").hide();
+        	$(".alert-con").text("50元");
+        	$(".play-alert").show();
+        })
+
+        
+        
+
+    };
+
+   
+   
+
+
+
+
+
+</script>
+</html>
